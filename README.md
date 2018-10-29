@@ -1,6 +1,10 @@
 # Welcome on Rockside!
-Deploy. Run. Monitor. The open source platform for unleashing Blockchain.
+Deploy. Run. Monitor. The platform for unleashing Blockchain.
 Available Blockchain: Ethereum, Tobalaba, Quorum
+
+## Getting started
+*  [Install rockside on Linus / OS X](https://github.com/blockchain-studio/rockside-wiki/wiki/How-to-install-Rockside-on-Linux---OS-X)
+*  [Rockside Alpha FAQ](https://github.com/blockchain-studio/rockside-wiki/wiki/Rockside-Alpha-FAQ)
 
 ## HOW IT WORKS
 Rockside is the orchestrator for accelerating the industralisation of your blockchain solution available on SAAS or Self-managed version. By standardising some key processes during the deployment stage or the run phase, your time to market will be improved and your risk and cost will be reduced significantly.
@@ -17,7 +21,4 @@ Visualise with a user-friendly interface your
 Blockchain node, transactions,
 access, tokens, and smartcontracts.
 
-## Getting started
-*  [Install rockside on Linus / OS X](https://github.com/blockchain-studio/rockside-wiki/wiki/How-to-install-Rockside-on-Linux---OS-X)
-*  [Rockside Alpha FAQ](https://github.com/blockchain-studio/rockside-wiki/wiki/Rockside-Alpha-FAQ)
 
