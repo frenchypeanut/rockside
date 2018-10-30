@@ -1,24 +1,19 @@
-# Welcome on Rockside!
-Deploy. Run. Monitor. The platform for unleashing Blockchain.
-Available Blockchain: Ethereum, Tobalaba, Quorum
+# Rockside Wiki
 
-## Getting started
-*  [Install rockside on Linus / OS X](https://github.com/blockchain-studio/rockside-wiki/wiki/How-to-install-Rockside-on-Linux---OS-X)
-*  [Rockside Alpha FAQ](https://github.com/blockchain-studio/rockside-wiki/wiki/Rockside-Alpha-FAQ)
+## Introduction
+Rockside is a Blockchain orchestrator. Its goal is to accelerate the industrialization of the blockchain projects for companies and developers. Our first release is available as a private beta since November 1, 2018 for Rockside Launch client program members.
 
-## HOW IT WORKS
-Rockside is the orchestrator for accelerating the industralisation of your blockchain solution available on SAAS or Self-managed version. By standardising some key processes during the deployment stage or the run phase, your time to market will be improved and your risk and cost will be reduced significantly.
+## Launch Customer Program (LCP)
 
-### Deploy a node
-Join any (marketing victory ;)) Blockchain or create your own private
-Blockchain in few clicks (GUI) or command lines (CLI).
+As part of LCP (Launch Customer Program), we provide personalized technical support to our partners. Concretely we plan several technical meetings with a mutual commitment that aims to improve the product. Our product's roadmap is driven by feedback from these users. For more information about LCP : send us an email at support@blockchain-studio.com
 
-### Control your Blockchain access
-And store your keys.
+## LCP Release installation guide
+To use this guide, you must be part of the LCP (Launch Customer Program).
 
-### Manage your smartcontracts
-Visualise with a user-friendly interface your 
-Blockchain node, transactions,
-access, tokens, and smartcontracts.
+[Read the Rockside Installation Guide](https://github.com/blockchain-studio/rockside/wiki/How-to-install-Rockside-on-Linux---OS-X)
 
 
+## LCP Release FAQ
+This FAQ includes information about the architecture and the use of the service.
+
+[Read the LCP Release FAQ](https://github.com/blockchain-studio/rockside/wiki/Rockside-Alpha-FAQ)
