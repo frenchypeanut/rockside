@@ -10,10 +10,10 @@ As part of LCP (Launch Customer Program), we provide personalized technical supp
 ## LCP Release installation guide
 To use this guide, you must be part of the LCP (Launch Customer Program).
 
-[Read the Rockside Installation Guide](https://github.com/blockchain-studio/rockside/wiki/How-to-install-Rockside-on-Linux-or-OS-X-(LCP-Release))
+[Read the Rockside Installation Guide](https://github.com/blockchain-studio/rockside/wiki/Installation-guide)
 
 
 ## LCP Release FAQ
 This FAQ includes information about the architecture and the use of the service.
 
-[Read the LCP Release FAQ](https://github.com/blockchain-studio/rockside/wiki/Rockside-FAQ-(LCP-Release))
+[Read the LCP Release FAQ](https://github.com/blockchain-studio/rockside/wiki/FAQ)
