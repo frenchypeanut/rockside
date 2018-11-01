@@ -1,7 +1,7 @@
 # Rockside Wiki
 
 ## Introduction
-Rockside is a Blockchain orchestrator. Its goal is to accelerate the industrialization of blockchain projects for companies and developers. Our first release is available as a private beta since November 1, 2018 for Rockside Launch client program members.
+Rockside is a Blockchain orchestrator. Its goal is to accelerate the industrialization of blockchain projects for companies and developers. Our first release is available as a private beta since November 1, 2018 for Rockside Launch Customer Program members.
 
 ## Launch Customer Program (LCP)
 
