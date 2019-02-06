@@ -1,5 +1,7 @@
 # <a name="advanced_setup"></a>Advanced configuration(SMTP, Certificates, Data dir...)
 
+### How to configure SMTP Server
+
 Rockside provide a notification feature, but before to be able to use it, you need to configure your SMTP provider.
 
 
