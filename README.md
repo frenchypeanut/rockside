@@ -7,12 +7,10 @@ Rockside is a Blockchain orchestrator. Its goal is to accelerate the industriali
 ## <a name="knownledges"></a>Knowledges
 
 
-* [Frequently Asked Questions]()
-* [What is Rockside technical architecture?]()
-* [System requirement]()
-* [How to install Rockside Engine]()
-* [How to install Rockside Slave]()
-* [How to configure SMTP]()
+* [Tell me more about Rockside](more-about-rocskside.md)
+* [What is Rockside technical architecture?](rockside-technical-architecture.md)
+* [How to install Rockside]()
 * [How to send a transaction to my Node?]()
 * [Tell me more about consortium in rockside]()
-* [Tell me more about notifications]()
+* [Tell me more about mail notifications]()
+
