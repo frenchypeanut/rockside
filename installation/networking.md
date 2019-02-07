@@ -1,4 +1,4 @@
-# Which network ports need to be opened
+# How to configure network ports
 
 Typical network topology of a consortium is composed of:
 - one server which runs rockside-engine
