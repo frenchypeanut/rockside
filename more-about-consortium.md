@@ -4,15 +4,32 @@
 
 Using Rockside, it could take less than five minutes to have a consortium up and running.
 
-### One organisation of the consortium doesn’t want to use Rockside. Is it still possible to add it to the consortium ?
+### Which consensus are currently available within Rockside, in order to create consortiums ?
 
-Absolutely. Rockside gives you deployment facilities, transaction monitoring features and a lot more, but doesn’t create any dependency with the tool itself. Consortiums can be joined by any compatible client. Just export the genesis file from the Rockside web interface and give it to the organization which needs to run the consortium.
+PoA (Proof of Authority) is the only consensus algorithm supported for the moment.
 
+### How can I get ether to use on my consortium?
+
+When your consortium is in setup phase, before you start it, you can define a prefunded account.
+This account will receive a large amount of ether when the consortium is in place.
+
+
+### How can I connect to my consortium using metamask ?
+
+You have to paste the RPC URL of your consortium node in the Custom RPC URL of Metamask and voilà !
+
+
+### Does Rockside have access to my private keys ?
+
+Keys are stored in your own rockside slave instance, they are never exposed to the outside world, neither to rockside engine.
 
 ### How to deploy a real multi-companies consortium production network, within different cloud-provider or on premises, using different rockside instances ?
 
 The initiator of the consortium have to define members through the rockside web interface and to export Rockside consortium file.  Each member of the consortium has to install Rockside on its own instance, import Rockside Consortium File and validate. That’s all.
 
+### One organisation of the consortium doesn’t want to use Rockside. Is it still possible to add it to the consortium ?
+
+Absolutely. Rockside gives you deployment facilities, transaction monitoring features and a lot more, but doesn’t create any dependency with the tool itself. Consortiums can be joined by any compatible client. Just export the genesis file from the Rockside web interface and give it to the organization which needs to run the consortium.
 
 ### I just want to try the Rockside consortium manager locally. Do I have to launch Rockside multiple times on my computer, to try to run a consortium ?
 
@@ -32,27 +49,6 @@ Yes, Rockside provides the possibility to export the genesis file, with a simple
 A consortium on Ethereum provides a voting mechanism which gives the possibility to add or remove new validators. During the vote, each validator can specify an account they want to add to the consortium. If half of the validators vote for the same account, this one is added to the validator set. You can execute voting commands directly on your Rockside slave validator node instances, via command line. It will be soon integrated to Rockside’s user interface !
 
 
-
-### Which consensus are currently available within Rockside, in order to create consortiums ?
-
-PoA (Proof of Authority) is the only consensus algorithm supported for the moment.
-
-
 ### I don’t want to use Rockside anymore but I want to keep my consortium network up and running, is it possible ?
 
 Of course, you can uninstall Rockside and keep your nodes up and running. You can also export files relative to your consortium and launch it with any compatible Ethereum client.
-
-### Does Rockside have access to my private keys ?
-
-
-Keys are stored in your own rockside slave instance, they are never exposed to the outside world, neither to rockside engine.
-
-### How can I get ether to use on my consortium?
-
-When your consortium is in setup phase, before you start it, you can define a prefunded account.
-This account will receive a large amount of ether when the consortium is in place.
-
-
-### How can I connect to my consortium using metamask ?
-
-You have to paste the RPC URL of your consortium node in the Custom RPC URL of Metamask and voilà !
