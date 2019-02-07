@@ -10,7 +10,8 @@ The default ports specified during the install of rockside-engine are **80** and
 
 ## Rockside-slave
 
-Rockside-slave server listens by default on the port **3000**.To define a custom port, you can use the parameter **-http.port** when starting the slave.
+Rockside-slave server listens by default on the port **3000**. To define a custom port, you can use the parameter **-http.port** when starting the slave.
+
 You have to open this port on each running slave, in order to be able to be reached by rockside-engine.
 
 Also, on each slave run one or more nodes. Each Ethereum node needs to communicate with other nodes.
