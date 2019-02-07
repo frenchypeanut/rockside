@@ -53,6 +53,32 @@ On Rockside Engine go to the node creation page:
 
 Follows instructions
 
+### Configure Rockside slave service on systemd
+
+If you run a a linux distribution on your server, and use systemd, here are the configuration steps:
+
+Create and edit /lib/systemd/system/rockside-slave.service file with the following lines. Don(t forget to replace ENGINE-KEY and ENGINE-URL by your own Rockside engine parameters
+
+    [Unit]
+    Description=Rockside Slave
+    After=docker.service
+    Requires=docker.service
+    [Service]
+    Type=simple
+    Restart=always
+    RestartSec=5s
+    ExecStart=/usr/local/bin/rockside-slave -data /var/lib/rockside-slave -engine.key ENGINE-KEY -engine.url ENGINE-URL
+    [Install]
+    WantedBy=multi-user.target
+
+Enable the service
+
+    systemctl enable rockside-slave.service
+
+Start the service
+
+    systemctl start rockside-slave.service
+
 ## Congratulations!
 
 You’ve just successfully installed and configured Rockside and setup your first node.
