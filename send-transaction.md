@@ -27,3 +27,7 @@ In the Rockside graphical interface, a button "use with truffle" is available. T
 
 ### HDWalletProvider and Mnemonic
 A mnemonic is a pattern of letters, words, or associations which allows you to easily remember information. This system gives a human readable format of words to back-up your wallet for recovery. You can generate a mnemonic using [Metamask Seed](https://metamask.zendesk.com/hc/en-us/articles/360015489431-Exporting-Your-Seed-Phrase) or [hardware wallet](https://www.ledger.com/) or [online mnemonic](https://iancoleman.io/bip39/) generator. **Mnemonic = private keys = your identity = your wallets = your tokens = 😱! We highly recommend keep your mnemonic secret. Never pass it on to anyone and keep it as safe as possible.**
+
+## Can I use my node with websocket
+
+The current release does not allow websocket connection to nodes deployed with Rockside. To query a Rockside node, you can use RPC requests through the URLs displayed on the node details page.

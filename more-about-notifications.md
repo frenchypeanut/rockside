@@ -1,8 +1,11 @@
 # Tell me more about mail notifications
 
+
 ### What are notifications?
 
 Notification are a means to let the user know that an unusual event happened in Rockside. It takes the form of an email with the relevant information that is sent to an address specified by the user.
+
+To enable notifications, you must setup an SMTP server on rockside. See [Advanced configuration (SMTP, Certificates, Data dir...)](installation/advanced-setup.md)
 
 ### Which services are using notifications?
 
