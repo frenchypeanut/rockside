@@ -1,10 +1,5 @@
 # Tell me more about consortium in Rockside
 
-
-### I just installed Rockside. What else do I need to start a consortium ?
-
-Did you also install rockside-slave? If you did, nothing else ! You can launch a consortium directly. Rockside will help you to manage and launch your consortium.
-
 ### How much time does it take to launch a consortium using Rockside?
 
 Using Rockside, it could take less than five minutes to have a consortium up and running.
