@@ -8,7 +8,7 @@ Using Rockside, it could take less than five minutes to have a consortium up and
 
 PoA (Proof of Authority) is the only consensus algorithm supported for the moment.
 
-### How can I get ether to use on my consortium?
+### How can I get Ether to use on my consortium?
 
 When your consortium is in setup phase, before you start it, you can define a prefunded account.
 This account will receive a large amount of ether when the consortium is in place.
@@ -22,6 +22,11 @@ You have to paste the RPC URL of your consortium node in the Custom RPC URL of M
 ### Does Rockside have access to my private keys ?
 
 Keys are stored in your own rockside slave instance, they are never exposed to the outside world, neither to rockside engine.
+
+### How can I access the account that was generated for validating transactions on my consortium?
+ 
+Connect to the server were your account was generated. On the rockside slave datadir (by default ~/.rockside/) all informations about your node are stored in the folder **datadir/node/geth-CONSORTIUM_NAME-MEMBER_NAME/data**. In the keystore folder you have all information about your account. The password to access the private key is on the pass.txt file.
+
 
 ### How to deploy a real multi-companies consortium production network, within different cloud-provider or on premises, using different rockside instances ?
 
