@@ -25,8 +25,8 @@ Keys are stored in your own rockside slave instance, they are never exposed to t
 
 ### How can I access the account that was generated for validating transactions on my consortium?
  
-Connect to the server were your account was generated. On the rockside slave datadir (by default ~/.rockside/) all informations about your node are stored in the folder **datadir/node/geth-CONSORTIUM_NAME-MEMBER_NAME/data**. In the keystore folder you have all information about your account. The password to access the private key is on the pass.txt file.
-
+Connect to the server were your account was generated.  All informations about your node are stored in **SLAVE_DATADIR/node/geth-CONSORTIUM_NAME-MEMBER_NAME/data** (by default SLAVE_DATADIR is ~/.rockside/). 
+The **pass.txt** contains the password to access your account. Your account is present on the keystore folder.
 
 ### How to deploy a real multi-companies consortium production network, within different cloud-provider or on premises, using different rockside instances ?
 
