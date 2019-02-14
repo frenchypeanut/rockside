@@ -6,39 +6,15 @@ Rockside provide a notification feature, but before to be able to use it, you ne
 
 
 
-By default you can use this command :
-
+You can use this command :
 
 
 ```
-
-nano ~/.rockside/engine/rockside.env
-
+rockside engine configure-smtp
 ```
 
-And then complete those variable with your smtp informations :
+You will be asked for SMTP host, SMTP port, SMTP username and password, and mail encryption. Rockside Engine will be reloaded with new configuration.
 
-```
-
-MAIL_HOST=<your mail host>
-
-MAIL_PORT=<your mail port>
-
-MAIL_ENCRYPTION=<your mail encryption, by default put tls>
-
-MAIL_USERNAME=<your mail username>
-
-MAIL_PASSWORD=<your mail password>
-
-```
-
-And finally, relaunch the engine with the new configuration
-
-```
-
-sudo rockside engine reconfigure
-
-```
 
 ### Use a custom data dir for Rockside Engine installation
 By default Rockside Engine installs in your HOME directory. It create a folder at this path "~/.rockside/engine". This folder contains all settings required by the application.  To specify a custom datadir use:
