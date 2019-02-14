@@ -73,6 +73,19 @@ At the end of installation, Rockside Engine is running.
 
 ⚠️Rockside Engine use a self-signed certificate for SSL. You may see a warning about this upon accessing your workspace for the first time. There’s nothing to worry about: you can safely proceed to the website.
 
+### Run Rockside Slave
+
+If you want to try Rockside on your local machine, you can launch Rockside Slave directly after Rockside Engine installation
+
+```
+rockside slave start
+```
+
+This command download and install Rockside slave, and register it to the local instance of Rockside engine.
+
+Prefer manual [install](https://github.com/blockchain-studio/rockside/blob/Ethcc-release/installation/install-rockside-slave.md) if you want to run a single/multiple production instance(s) of Rockside Slave on remote servers
+
+
 ### Create an account and sign-up on Rockside Engine
 
 - Open a browser and fill your Rockside Engine Url
@@ -140,7 +153,7 @@ Restart rockside :
 rockside engine letsencrypt init --hostname=demo.rockside.io
 ```
 
-#### Renew letenscrypt certificate
+#### Renew letsenscrypt certificate
 ```
 rockside engine letsencrypt renew --hostname=demo.rockside.io
 rockside engine stop && rockside engine start
