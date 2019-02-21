@@ -9,6 +9,12 @@ Rockside Slave requires the Docker Engine to run. Follow Docker installation ins
 
 If you install the Slave on the save server as the Engine, Docker engine should be already installed.
 
+### Operating systems
+
+Rockside can be installed on Linux and MacOS.
+If you are on linux please prefix all the following commands with 'sudo'
+
+
 ### Download Rockside Slave
 
 Download Rockside Slave executable to the server you want to install it.
@@ -31,13 +37,6 @@ You will need this registration token to connect the slave to the engine.
 
 On server where you downloaded Rockside slave executable,
 
-If you are **on linux** you should run Rockside Slave with super user right:
-
-```
-sudo rockside-slave --engine.key SLAVE_REGISTRATION_TOKEN --engine.url ROCKSIDE_ENGINE_URL:PORT
-```
-
-On **OS X** just run:
 ```
 rockside-slave --engine.key SLAVE_REGISTRATION_TOKEN --engine.url ROCKSIDE_ENGINE_URL:PORT
 ```
@@ -79,9 +78,10 @@ Start the service
 
     systemctl start rockside-slave.service
 
-## Congratulations!
+## Deploy facilities on cloud provider
 
-You’ve just successfully installed and configured Rockside and setup your first node.
 
-Good luck in the blockchain world!🤠
+You can deploy Rockside Slave on any cloud provider. Rockside helps you to deploy your slave in one click on Amazon Web Services and Microsoft Azure with pre-provisioned scripts. You need to be logged in an existing account. Google Cloud Platform is coming soon.
+
+![Image of Rockside Slave deployment possibilities](https://raw.githubusercontent.com/blockchain-studio/rockside/master/rockside-lcp-architecture.jpg)
 

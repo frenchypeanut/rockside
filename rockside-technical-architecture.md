@@ -2,7 +2,7 @@
 
 ## Rockside-engine (Hosted on private cloud or on-premise)
 
-Rockside-engine is the entry point of the service. It is accessible via a graphical interface in a web browser. It's a kind of super proxy that simplifies the orchestration of Blockchain nodes.
+Rockside-engine is the entry point of the service. It is accessible via a graphical interface in a web browser. It's a kind of super proxy that simplifies the orchestration of Blockchain nodes. Like the whole Rockside solution, this proxy is self hosted. It means that you have to deploy it on your own servers.
 
 ## Rockside-slave (Hosted on private cloud or on-premise)
 

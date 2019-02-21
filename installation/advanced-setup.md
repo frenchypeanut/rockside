@@ -4,8 +4,6 @@
 
 Rockside provide a notification feature, but before to be able to use it, you need to configure your SMTP provider.
 
-
-
 You can use this command :
 
 
@@ -20,7 +18,7 @@ You will be asked for SMTP host, SMTP port, SMTP username and password, and mail
 By default Rockside Engine installs in your HOME directory. It create a folder at this path "~/.rockside/engine". This folder contains all settings required by the application.  To specify a custom datadir use:
 
 ```
-rockside engine install --datadir=/ssd/rockside-engine
+rockside engine install --datadir /ssd/rockside-engine
 ```
 ### <a name="hostname_options"></a> Rockside Engine available on your network or online
 
