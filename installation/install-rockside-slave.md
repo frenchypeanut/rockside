@@ -83,5 +83,5 @@ Start the service
 
 You can deploy Rockside Slave on any cloud provider. Rockside helps you to deploy your slave in one click on Amazon Web Services and Microsoft Azure with pre-provisioned scripts. You need to be logged in an existing account. Google Cloud Platform is coming soon.
 
-![Image of Rockside Slave deployment possibilities](https://raw.githubusercontent.com/blockchain-studio/rockside/master/rockside-lcp-architecture.jpg)
+![Image of Rockside Slave deployment possibilities](https://raw.githubusercontent.com/blockchain-studio/rockside/master/slave_deployment.png)
 

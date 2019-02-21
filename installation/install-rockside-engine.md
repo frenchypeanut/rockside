@@ -3,10 +3,6 @@ First, you need to install Rockside Engine. It allows you to manage your blockch
 [Learn more about Rockside architecture](https://github.com/blockchain-studio/rockside/wiki/FAQ#what-is-rockside-technical-architecture)
 
 
-### <a name="requirements"></a>Requirements
-* Be part of the [Launch Customer Program](https://github.com/blockchain-studio/rockside/wiki#launch-customer-program-lcp)
-* Have access to our Docker Hub image repository. For that you must contact us to request an access at tech@rockside.io
-
 ### Install Docker Engine
 
 Rockside Engine requires the Docker Engine to run. Public Rockside images will be pulled by installation scripts from the public official Docker hub registry.
@@ -23,7 +19,7 @@ With the Docker Engine installed you can now install Docker Compose which is als
 ### Operating systems
 
 Rockside can be installed on Linux and MacOS.
-If you are on linux please prefix all the following commands with 'sudo'
+**If you are on linux please prefix all the following commands with 'sudo'**
 
 
 ### Download Rockside installer
@@ -48,7 +44,7 @@ Server Hostname:localhost
 HTTP Server Port: 80
 HTTPS Server Port: 443
 ```
-If you want Rockside Engine to be available on your **local network or internet**, see the [hostame options](#hostname_options)
+If you want Rockside Engine to be available on your **local network or internet**, see the [hostname options](advanced-setup.md#hostname_options)
 
 At the end of installation, Rockside Engine is running. If you want to understand exactly what is done on your system, please read the [FAQ](../more-about-rockside.md#artefacts)
 
