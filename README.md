@@ -18,4 +18,4 @@ See you on March 5th !
 * [Tell me more about consortium in Rockside](more-about-consortium.md)
 * [Tell me more about mail notifications](more-about-notifications.md)
 * [The Rockside guitar tutorial](tutorial/guitar-tutorial.md)
-* [Release notes]()
+* [Release notes](release-notes.md)
