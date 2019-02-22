@@ -1,4 +1,4 @@
-# How to install Rockside Engine on Linux or OS X (LCP Release)
+# How to install Rockside Engine on Linux or OS X
 First, you need to install Rockside Engine. It allows you to manage your blockchain projects by inviting users, running blockchain nodes, displaying your node transactions, providing node's RPC endpoint ...
 [Learn more about Rockside architecture](https://github.com/blockchain-studio/rockside/wiki/FAQ#what-is-rockside-technical-architecture)
 
@@ -63,15 +63,13 @@ rockside slave start
 This command download and install Rockside slave, and register it to the local instance of Rockside engine. More infos [here](../more-about-rockside.md#artefacts)
 
 This way of running Rockside Slave is super-convenient for local testing purpose, or for a single node deployment.
-Prefer manual [install](https://github.com/blockchain-studio/rockside/blob/Ethcc-release/installation/install-rockside-slave.md) if you want to run multiple instances of Rockside Slave on remote servers, for example if you node to maintain multiple different nodes.
+**Prefer manual [install](installation/install-rockside-slave.md) if you want to run multiple instances of Rockside Slave on remote servers, for example if you node to maintain multiple different nodes**.
 
 
-### Create an account and sign-up on Rockside Engine
+### Sign-up on Rockside Engine
 
 - Open a browser and fill your Rockside Engine Url
-- Click on sign-up
-- Fill the form
-- You can now sign-in on Rockside Engine. Rockside engine comes with default login for convenience. Default user credentials are 'default_user@rockside.io' and 'password'. ⚠️ Please change password of the default user while connected ⚠️
+- Rockside engine comes with default login for convenience. Default user credentials are 'default_user@rockside.io' and 'password'. ⚠️ Please change password of the default user while connected ⚠️
 
 
 ### Uninstall Rockside Engine
