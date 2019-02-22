@@ -1,4 +1,5 @@
-# Rockside Wiki 🎸
+# Rockside Documentation 🎸
+## EthCC community edition release
 
 *The following documentation is relative the first public beta release of Rockside -EthCC community edition release- which **will be available 5th March 2019**. If you try to run it before this date, there is no guarantee that the commands mentioned in this documentation would work*
 
