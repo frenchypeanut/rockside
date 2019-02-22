@@ -12,7 +12,7 @@ If you install the Slave on the save server as the Engine, Docker engine should 
 ### Operating systems
 
 Rockside can be installed on Linux and MacOS.
-If you are on linux please prefix all the following commands with 'sudo'
+**If you are on linux please prefix all the following commands with 'sudo'**
 
 
 ### Download Rockside Slave
@@ -79,7 +79,6 @@ Start the service
     systemctl start rockside-slave.service
 
 ## Deploy facilities on cloud provider
-
 
 You can deploy Rockside Slave on any cloud provider. Rockside helps you to deploy your slave in one click on Amazon Web Services and Microsoft Azure with pre-provisioned scripts. You need to be logged in an existing account. Google Cloud Platform is coming soon.
 
