@@ -64,13 +64,13 @@ This command download and install Rockside slave, and register it to the local i
 
 This way of running Rockside Slave is super-convenient for local testing purpose, or for a single node deployment.
 
-**Prefer manual [install](install-rockside-slave.md) if you want to run multiple instances of Rockside Slave on remote servers, for example if you node to maintain multiple different nodes**.
+**Prefer manual [install](install-rockside-slave.md) if you want to run multiple instances of Rockside Slave on remote servers**.
 
 
 ### Sign-up on Rockside Engine
 
 - Open a browser and fill your Rockside Engine Url
-- Rockside engine comes with default login for convenience. Default user credentials are 'default_user@rockside.io' and 'password'. ⚠️ Please change password of the default user while connected ⚠️
+- Rockside engine comes with default login for convenience. Default user credentials are 'default_user@rockside.io' and 'password'. ⚠️ **Please change password of the default user while connected** ⚠️
 
 
 ### Uninstall Rockside Engine
