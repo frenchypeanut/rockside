@@ -63,7 +63,8 @@ rockside slave start
 This command download and install Rockside slave, and register it to the local instance of Rockside engine. More infos [here](../more-about-rockside.md#artefacts)
 
 This way of running Rockside Slave is super-convenient for local testing purpose, or for a single node deployment.
-**Prefer manual [install](installation/install-rockside-slave.md) if you want to run multiple instances of Rockside Slave on remote servers, for example if you node to maintain multiple different nodes**.
+
+**Prefer manual [install](install-rockside-slave.md) if you want to run multiple instances of Rockside Slave on remote servers, for example if you node to maintain multiple different nodes**.
 
 
 ### Sign-up on Rockside Engine
