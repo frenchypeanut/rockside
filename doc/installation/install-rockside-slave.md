@@ -87,12 +87,20 @@ You can deploy Rockside Slave on any cloud provider. Rockside helps you to deplo
 
 ### Deployment on Microsoft Azure
 
-Please ensure to be logged in your browser on your Microsoft Azure account. Click on the Azure button on your Rockside Engine interface. A new page will be opened, and you will be directly on the Microsoft custom deployment. Fill the requested details with **your own** parameters. You can find the Engine key under the name of 'slave registration token' on the slave registration page where you had the choice between Azure, AWS or manual installation.
+Please ensure to be logged in your browser on your Microsoft Azure account. Click on the Azure button on your Rockside Engine interface. A new page will be opened, and you will be directly on the Microsoft custom deployment. Fill the requested details with **your own** parameters. You can find the Engine key under the name of 'slave registration token' on the slave registration page where you had the choice between Azure, AWS or manual installation. Then launch the deployment. You will be able to see your new slave instance of the slave page of your Rockside Engine in a few minutes.
 
 
 ![Image of Rockside Slave deployment on Azure](https://raw.githubusercontent.com/blockchain-studio/rockside/master/doc/azure_custom_deployment.png)
 
 
-### Deployment
+### Deployment on AWS
+
+Please ensure to be logged in your browser on your AWS account, and to have already an existing EC2 key pair. Click on the AWS button on your Rockside Engine interface. You will be asked to choose a timezone.
+
+![Image of Rockside Slave deployment on AWS - zone](https://raw.githubusercontent.com/blockchain-studio/rockside/master/doc/aws_zone.png)
 
 
+Then a new page will be opened, and you will directly be on the AWS Cloudformation page. Engine Key is already pre-filled. Fill the other requested details with **your own** parameters. Then launch the deployment. You will be able to see your new slave instance of the slave page of your Rockside Engine in a few minutes.
+
+
+![Image of Rockside Slave deployment on AWS - deployment](https://raw.githubusercontent.com/blockchain-studio/rockside/master/doc/aws_deployment.png)
