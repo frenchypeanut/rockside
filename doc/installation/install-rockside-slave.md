@@ -82,7 +82,7 @@ Start the service
 
 You can deploy Rockside Slave on any cloud provider. Rockside helps you to deploy your slave in one click on Amazon Web Services and Microsoft Azure with pre-provisioned scripts. You need to be logged in an existing account. Google Cloud Platform is coming soon.
 
-![Image of Rockside Slave deployment possibilities](https://raw.githubusercontent.com/blockchain-studio/rockside/master/slave_deployment.png)
+![Image of Rockside Slave deployment possibilities](https://raw.githubusercontent.com/blockchain-studio/rockside/master/doc/slave_deployment.png)
 
 
 ### Deployment on Microsoft Azure
@@ -90,6 +90,9 @@ You can deploy Rockside Slave on any cloud provider. Rockside helps you to deplo
 Please ensure to be logged in your browser on your Microsoft Azure account. Click on the Azure button on your Rockside Engine interface. A new page will be opened, and you will be directly on the Microsoft custom deployment. Fill the requested details with **your own** parameters. You can find the Engine key under the name of 'slave registration token' on the slave registration page where you had the choice between Azure, AWS or manual installation.
 
 
-![Image of Rockside Slave deployment on Azure](https://raw.githubusercontent.com/blockchain-studio/rockside/master/azure_custom_deployment.png)
+![Image of Rockside Slave deployment on Azure](https://raw.githubusercontent.com/blockchain-studio/rockside/master/doc/azure_custom_deployment.png)
+
+
+### Deployment
 
 

@@ -11,11 +11,11 @@ See you on March 5th !
 ## <a name="knownledges"></a>Knowledges
 
 
-* [Tell me more about Rockside](more-about-rockside.md)
-* [What is Rockside technical architecture?](rockside-technical-architecture.md)
-* [How to install Rockside](installation/install-rockside.md)
-* [How to send a transaction to my Node?](send-transaction.md)
-* [Tell me more about consortium in Rockside](more-about-consortium.md)
-* [Tell me more about mail notifications](more-about-notifications.md)
-* [The Rockside guitar tutorial](tutorial/guitar-tutorial.md)
-* [Release notes](release-notes.md)
+* [Tell me more about Rockside](doc/more-about-rockside.md)
+* [What is Rockside technical architecture?](doc/rockside-technical-architecture.md)
+* [How to install Rockside](doc/installation/install-rockside.md)
+* [How to send a transaction to my Node?](doc/send-transaction.md)
+* [Tell me more about consortium in Rockside](doc/more-about-consortium.md)
+* [Tell me more about mail notifications](doc/more-about-notifications.md)
+* [The Rockside guitar tutorial](doc/tutorial/guitar-tutorial.md)
+* [Release notes](doc/release-notes.md)

@@ -8,7 +8,7 @@ Rockside-engine is the entry point of the service. It is accessible via a graphi
 
 A slave is controlled by a Rockside Engine. It’s in charge of running nodes on a server. You can install it on the same server as the engine, but we recommend that you install it on a dedicated server. Slave requires a lot of space on the hard drive and CPU to synchronize with the blockchain.
 
-![Image of Rockside Alpha Architecture](https://raw.githubusercontent.com/blockchain-studio/rockside/master/rockside-lcp-architecture.jpg)
+![Image of Rockside Alpha Architecture](https://raw.githubusercontent.com/blockchain-studio/rockside/master/doc/rockside-lcp-architecture.jpg)
 
 ## Why separate engine and nodes in different layers ?
 The main idea is to separate responsibilities.

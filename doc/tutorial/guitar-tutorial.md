@@ -7,7 +7,7 @@ In this tutorial we will learn how to:
 * Interact with your smart contract in rockside guitar Dapp
 * Monitor transaction on Rockside
 
-![home-rockside-guitar-tutorial](https://github.com/blockchain-studio/rockside/blob/master/home-rockside-guitar-tutorial.png)
+![home-rockside-guitar-tutorial](https://github.com/blockchain-studio/rockside/blob/master/doc/home-rockside-guitar-tutorial.png)
 
 ## I - Install Rockside environment
 
@@ -17,7 +17,7 @@ Follow instructions of the [installation guide](https://github.com/blockchain-st
 ### Create your node
 Once Rockside is installed on your environment, go to "node creation form", select the Ropsten network and choose Fast for synchronization mode.
 
-![rockside new node](https://github.com/blockchain-studio/rockside/blob/master/rockside-new-node.png)
+![rockside new node](https://github.com/blockchain-studio/rockside/blob/master/doc/rockside-new-node.png)
 
 **Get ready for a long break ☕**
 
@@ -32,11 +32,11 @@ Once Rockside is installed on your environment, go to "node creation form", sele
 
 Go to Rockside, copy the URL of your node:
 
-![rockside node list](https://github.com/blockchain-studio/rockside/blob/master/rockside-nodes-list.jpg)
+![rockside node list](https://github.com/blockchain-studio/rockside/blob/master/doc/rockside-nodes-list.jpg)
 
 Open your Metamask extension and add a new RPC URL.
 
-![metamask settings](https://github.com/blockchain-studio/rockside/blob/master/metamask-settings.jpg)
+![metamask settings](https://github.com/blockchain-studio/rockside/blob/master/doc/metamask-settings.jpg)
 
 ## III - Write your Smartcontract and deploy it on your Rockside Node
 
@@ -44,7 +44,7 @@ For this tutorial we use an online IDE called remix: https://remix.ethereum.org
 
 Check in the **Run** tab that Remix is using the Web3 API injected by your Metamask.
 
-![remix injected web3](https://github.com/blockchain-studio/rockside/blob/master/remix-injected-web3.png)
+![remix injected web3](https://github.com/blockchain-studio/rockside/blob/master/doc/remix-injected-web3.png)
 
 Copy the smart contract code below.
 
@@ -66,11 +66,11 @@ contract RocksideFlag {
 
 **Compile** (if it's not automatic) and **Deploy** the contract.
 
-![deploy smartcontract](https://github.com/blockchain-studio/rockside/blob/master/remix-deploy-contract.jpg)
+![deploy smartcontract](https://github.com/blockchain-studio/rockside/blob/master/doc/remix-deploy-contract.jpg)
 
 Once the transaction confirmed, save the address of the newly deployed contract, we will need it later in this tutorial.
 
-![adr of deployed sm](https://github.com/blockchain-studio/rockside/blob/master/remix-sm-adr.jpg)
+![adr of deployed sm](https://github.com/blockchain-studio/rockside/blob/master/doc/remix-sm-adr.jpg)
 
 ## IV - Bookmark the address of the smart contract in Rockside
 
@@ -80,11 +80,11 @@ First open your rockside UI instance and go to the **Address Book** page.
 
 Then fill the form with your previously deployed smart contract address, a label (ex: Rockside Guitar Contract) and an image ([this one](https://www.freepik.com/free-icon/bass-guitar_855554.htm) for example).
 
-![](https://github.com/blockchain-studio/rockside/blob/master/rockside-add-bookmarked-adr.png)
+![](https://github.com/blockchain-studio/rockside/blob/master/doc/rockside-add-bookmarked-adr.png)
 
 Tada !!
 
-![](https://github.com/blockchain-studio/rockside/blob/master/rockside-list-bookmarked-addresses.png)
+![](https://github.com/blockchain-studio/rockside/blob/master/doc/rockside-list-bookmarked-addresses.png)
 
 ## V - Code the dApp that will interact with your contract
 
@@ -109,11 +109,11 @@ npm run dev
 The application should open in your default browser.
 
 ## VI - Capture the Rockside Guitare
-![capture-guitare](https://github.com/blockchain-studio/rockside/blob/master/capture-guitare.png)
+![capture-guitare](https://github.com/blockchain-studio/rockside/blob/master/doc/capture-guitare.png)
 
 ## VII - Check your transaction in Rockside
 Go back to Rockside, your transaction appears and it is decorated with the Bookmarked Address
-![transaction-in-rockside](https://github.com/blockchain-studio/rockside/blob/master/transaction-in-rockside.png)
+![transaction-in-rockside](https://github.com/blockchain-studio/rockside/blob/master/doc/transaction-in-rockside.png)
 
 ## Conclusion
 With this tutorial, you've seen two different uses of your nodes: As developers, to deploy your smartcontract and as a user of your Dapp, to interact with the Smart contract. Once Rockside installed in your infrastructure, using and managing access to other Blockchain networks is really simple and fast.
