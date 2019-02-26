@@ -14,12 +14,12 @@ See you on March 5th !
 
 * [Tell me more about Rockside](doc/more-about-rockside.md)
 * [What is Rockside technical architecture?](doc/rockside-technical-architecture.md)
-* [How to install Rockside](doc/installation/install-rockside.md)
-  * [System Requirements](system-requirements.md)
-  * [How to install Rockside Engine](install-rockside-engine.md)
-  * [How to install Rockside Slave](install-rockside-slave.md)
-  * [How to configure network ports](networking.md)
-  * [Advanced configuration (SMTP, Certificates, Data dir...)](advanced-setup.md)
+* How to install Rockside
+  * [System Requirements](doc/installation/system-requirements.md)
+  * [How to install Rockside Engine](doc/installation/install-rockside-engine.md)
+  * [How to install Rockside Slave](doc/installation/install-rockside-slave.md)
+  * [How to configure network ports](doc/installation/networking.md)
+  * [Advanced configuration (SMTP, Certificates, Data dir...)](doc/installation/advanced-setup.md)
 * [How to send a transaction to my Node?](doc/send-transaction.md)
 * [Tell me more about consortium in Rockside](doc/more-about-consortium.md)
 * [Tell me more about mail notifications](doc/more-about-notifications.md)
