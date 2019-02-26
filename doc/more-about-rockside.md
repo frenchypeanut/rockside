@@ -37,6 +37,6 @@ At the launch of Rockside Slave, you will have:
 - A running container per node instanciated through Rockside interface
 - A persistent folder where will be stored you blockchain datas.
 
-## I run a rockside instance. I noticed than anybody could create an account on Rockside interface
+## I run a "Early Access" version of rockside. I noticed than anybody could create an account on Rockside interface
 
 Indeed ! The EthCC Early Access release don't give the possibility to restrict the signup only to whitelisted users.
