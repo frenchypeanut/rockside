@@ -21,9 +21,11 @@ Terms and expressions whose first letter of each word is in capital letters have
 The Agreement sets out the conditions under which Blockchain Studio - in consideration of the payment of the Royalty - agrees to grant the User a Rockside license.
 
 **Article 3	ENTRY INTO FORCE - DURATION**
+
 This Agreement is effective as from the date of first download, and/or first installation, and/or first execution of Rockside by the User, for an indefinite duration.
 
 **Article 4	FINANCIAL CONDITIONS**
+
 Provided that the User complies with all terms and conditions of this Agreement, the rights granted hereunder shall remain royalty-free.
 
 **Article 5	RIGHT OF USE**
@@ -43,6 +45,7 @@ The User undertakes to refrain, directly or indirectly, except with the express,
 (viii)	translate, adapt, arrange, modify Rockside in any way, integrate or combine it with other software or create composite or derivative works with the help of all or part of Rockside.
 
 **Article 6	INTELLECTUAL PROPERTY**
+
 6.1	Rockside’s Property
 Blockchain Studio declares that it owns the intellectual property rights and retains Rockside’s intellectual property. The granting of Rockside’s right of use under the Agreement does not transfer any ownership rights.
 The User acknowledges and agrees that Rockside, and all of its components, as well as all trade secrets, copyrights, patents, trademarks and other proprietary and intellectual property rights attached thereto, are and remain at all times the exclusive property of Blockchain Studio.
