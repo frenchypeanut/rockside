@@ -1,14 +1,14 @@
 
-**
 
 ## ROCKSIDE “EARLY ACCESS” LICENSE AGREEMENT
 
-**
+
 
 *This Self-Managed Rockside License Agreement governs the relationship between Blockchain Studio, a simplified joint stock company with a share capital of 6,544 euros, registered with the Trade and Commerce Register of Nanterre under the number 838 568 004, having its registered address at 8, place du marché - 92200 Neuilly-sur-Seine, France ("Blockchain Studio") and any natural person who has subscribed an account in order to use the Rockside software in its “Community Edition” (the “User”). 
 Blockchain Studio and the User are hereinafter referred to individually as a "Party" and collectively as the "Parties".*
  
 **Article 1	DEFINITIONS**
+
 Terms and expressions whose first letter of each word is in capital letters have, within the Agreement, the meaning assigned to them below, whether they are used in the singular or plural.
 1.1	“Agreement” means this Rockside “Early Access” license agreement and, where applicable, any amendments that may complete it, to the exclusion of any other documents, in particular those that may be issued by the User before or after the signing of the Agreement.
 1.2	“Blockchain” means a distributed database that manages the Data and protects it from falsification or modification via its nodes. The Blockchain is managed by the User via Rockside.
@@ -17,6 +17,7 @@ Terms and expressions whose first letter of each word is in capital letters have
 1.5	“Rockside” refers to the software solution created by Blockchain Studio that allows its users to administer, supervise and operate a Blockchain, public or private.
 
 **Article 2	PURPOSE OF THE AGREEMENT**
+
 The Agreement sets out the conditions under which Blockchain Studio - in consideration of the payment of the Royalty - agrees to grant the User a Rockside license.
 
 **Article 3	ENTRY INTO FORCE - DURATION**
