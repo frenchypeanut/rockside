@@ -4,7 +4,7 @@
 
 
 
-*This Self-Managed Rockside License Agreement governs the relationship between Blockchain Studio, a simplified joint stock company with a share capital of 6,544 euros, registered with the Trade and Commerce Register of Nanterre under the number 838 568 004, having its registered address at 8, place du marché - 92200 Neuilly-sur-Seine, France ("Blockchain Studio") and any natural person who has subscribed an account in order to use the Rockside software in its “Community Edition” (the “User”). 
+*This Self-Managed Rockside License Agreement governs the relationship between Blockchain Studio, a simplified joint stock company with a share capital of 6,544 euros, registered with the Trade and Commerce Register of Nanterre under the number 838 568 004, having its registered address at 8, place du marché - 92200 Neuilly-sur-Seine, France ("Blockchain Studio") and any natural person who has subscribed an account in order to use the Rockside software in its “Early access” edition (the “User”). 
 Blockchain Studio and the User are hereinafter referred to individually as a "Party" and collectively as the "Parties".*
  
 **Article 1	DEFINITIONS**
