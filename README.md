@@ -28,6 +28,11 @@ curl -sSL http://releases.rockside.io/cli/get.sh | sh
 rockside engine install
 ```
 
+### Sign-up on Rockside Engine
+
+- Open a browser and fill your Rockside Engine Url
+- Rockside engine comes with default login for convenience. Default user credentials are 'default_user@rockside.io' and 'password'. ⚠️ **Please change password of the default user while connected** ⚠️
+
 
 ## <a name="knownledges"></a>Knowledges
 
