@@ -10,7 +10,7 @@ PoA (Proof of Authority) is the only consensus algorithm supported for the momen
 
 ### Architecture of a consortium using Rockside
 
-![Rockside Consortium architecture diagram](https://raw.githubusercontent.com/blockchain-studio/rockside/master/doc/rockside-consortium.png)
+![Rockside Consortium architecture diagram](https://raw.githubusercontent.com/blockchain-studio/rockside/master/doc/rockside-consortium-beta.png)
 
 ### How can I get Ether to use on my consortium?
 
