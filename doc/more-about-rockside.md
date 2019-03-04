@@ -13,7 +13,7 @@ _(Pantheon Ethereum client integration in progress !)_
 
 Because we believe in the potential of this protocol. Ethereum is popular, public, open-source and robust. Furthermore, it fits to many corporate needs.
 
-## Is it risky to send transaction to Rockside's nodes during alpha version?
+## Is it risky to send transaction to Rockside's nodes during Early Access version?
 
 Before sending transaction to **your own** Rockside node(s), you need to create and sign them offline. Rockside have no visibility of your private key. Finally the question is : is Blockchain protocol secure ? Yes, by design ;)
 
