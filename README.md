@@ -9,6 +9,10 @@ Rockside is a **self-hosted** Blockchain Service Provider. Its goal is to accele
 This repository is the [right place](https://github.com/blockchain-studio/rockside/issues) if you need any interaction with the team. Questions, issues are more than welcome.
 See you on March 5th !
 
+## <a name="teasing"></a>Install Rockide in 5 minutes !
+If you have docker installed, just launch Rockside CLI and enjoy!
+![Image of Rockside Cli](https://raw.githubusercontent.com/blockchain-studio/rockside/master/doc/rockside-cli.gif)
+
 ## <a name="knownledges"></a>Knowledges
 
 
