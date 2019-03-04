@@ -25,3 +25,4 @@ See you on March 5th !
 * [Tell me more about mail notifications](doc/more-about-notifications.md)
 * [The Rockside guitar tutorial](doc/tutorial/guitar-tutorial.md)
 * [Release notes](doc/release-notes.md)
+* [Troubleshooting](doc/troubleshooting.md)
