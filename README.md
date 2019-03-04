@@ -1,4 +1,5 @@
 # Rockside Documentation 🎸
+![Rockside preview](https://raw.githubusercontent.com/blockchain-studio/rockside/master/doc/rockside-preview.png)
 ## EthCC Early Access release
 
 *The following documentation is relative the first public beta release of Rockside -EthCC Early Access release- which **will be available 5th March 2019**. If you try to run it before this date, there is no guarantee that the commands mentioned in this documentation would work*
