@@ -41,6 +41,14 @@ On server where you downloaded Rockside slave executable,
 rockside-slave --engine.key SLAVE_REGISTRATION_TOKEN --engine.url ROCKSIDE_ENGINE_URL:PORT
 ```
 
+If you run rockside slave on the same machine as the engine, add the parameter **-http.detectIp**
+
+
+```
+rockside-slave --engine.key SLAVE_REGISTRATION_TOKEN --engine.url ROCKSIDE_ENGINE_URL:PORT -http.detectIp
+```
+
+
 **Tips:** To run Rockside Slave in background, add "&" at the end of the command. When it's running in background, simply type fg to bring it to foreground.
 
 ### Create a Node
