@@ -24,7 +24,7 @@ See [the official Vault documentation](https://www.vaultproject.io/docs/concepts
 
 See [the official Vault documentation](https://learn.hashicorp.com/vault/getting-started/install).
 
-### Hashicorp Vault plugin installation & start
+### Rockside Hashicorp Vault plugin installation & start
 
 See the readme on the [github project](https://github.com/blockchain-studio/rockside-hashicorp-vault-plugin).
 
