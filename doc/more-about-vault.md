@@ -26,12 +26,21 @@ See [the official Vault documentation](https://learn.hashicorp.com/vault/getting
 
 ### Rockside Hashicorp Vault plugin installation & start
 
-See the readme on the [github project](https://github.com/blockchain-studio/rockside-hashicorp-vault-plugin).
+The purpose of this plugin is to provide the vault with a connector to the rockside engine and some features to manage Ethereum account.
 
-After that you need to connect your engine to the vault. Add this line in the .env of rockside engine.
+For more details and install process, see the readme on the [project github] (https://github.com/blockchain-studio/rockside-hashicorp-vault-plugin).
 
-```text
+After that you need to connect your engine to the vault.
+
+Edit **~/.rockside/engine/rockside.env** and add:
+
+```
 VAULT_HOST=<YOUR_VAULT_ADDRESS>/v1/rockside/
+```
+
+Relaunch Engine with new configuration:
+```
+sudo rockside engine reconfigure
 ```
 
 ### Storing private keys
