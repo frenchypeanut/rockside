@@ -28,7 +28,7 @@ See [the official Vault documentation](https://learn.hashicorp.com/vault/getting
 
 The purpose of this plugin is to provide the vault with a connector to the rockside engine and some features to manage Ethereum account.
 
-For more details and install process, see the readme on the [project github] (https://github.com/blockchain-studio/rockside-hashicorp-vault-plugin).
+For more details and install process, see the readme on the [project github](https://github.com/blockchain-studio/rockside-hashicorp-vault-plugin).
 
 After that you need to connect your engine to the vault.
 
@@ -128,6 +128,71 @@ path "rockside/keys/0x62b1d469a3ae3bb5669ea69c933bb1649ff02439" {
 EOF
 ```
 
+#### create a token for a policy
+
+```sh
+vault token create -policy=<policy name>
+```
+
+This token allows you to connect to the vault and have access to all the route accessible with the associated policy.
+
+### Example with truffle
+
+First generate an account. You will need to transfert some ether to that address.
+
+```sh
+vault write -f rockside/keys/new
+# return the address: 0xabcdef00000000000000000000000000000000000
+```
+
+Create a policy for this account
+
+```sh
+vault policy write example -<<EOF
+path "rockside/sign-tx/0xabcdef00000000000000000000000000000000000" {
+  capabilities = ["create"]
+}
+EOF
+```
+
+Derivate a token from this policy
+
+```sh
+vault token create -policy=example
+# return the token: supertoken
+```
+
+Add the address and the token in your truffle.js. You will also need a node up.
+
+```sh
+var Web3 = require("web3");
+
+module.exports = {
+    networks: {
+        development: {
+            provider: function() {
+                return new Web3.providers.HttpProvider('http://localhost:8080/api/nodes/rpc/<node token>/supertoken');
+            },
+            network_id: "*",
+            from: "0xabcdef00000000000000000000000000000000000",
+        },
+    }
+}
+```
+
+Then launch truffle.
+
+```sh
+truffle migrate
+```
+
+And that's it ! You just sended an unsigned tx with your vault token, the vault has identified you and signed the tx with the good privatekey and then the tx was sent to the network. Keep in mind that the privatekey was never exposed.
+
+### Process of the solution
+
+![alt text](vault_simplified.png)
+
+<!--- COMMENTED FOR LATER
 ### Which authentication provider is supported ?
 
 We provide an javascript sdk for github authentification but you have to configure it in your vault first.
@@ -135,6 +200,7 @@ See [the official Vault documentation](https://www.vaultproject.io/docs/auth/git
 
 ### Github identity provider configuration
 You will need a github personal access token. If your not sure on how to get one look at the [official Vault documentation](https://www.vaultproject.io/docs/auth/github.html).
+
 #### Vault config
 
 ```sh
@@ -223,7 +289,5 @@ npm install sync-request -s
 ```sh
 truffle migrate
 ```
+--->
 
-### Process of the solution
-
-![alt text](vault_simplified.png)
