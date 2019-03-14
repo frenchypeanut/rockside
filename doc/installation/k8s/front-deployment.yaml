@@ -1,0 +1,55 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: rockside-front
+  labels:
+    app: rockside
+    tier: frontend
+spec:
+  type: NodePort
+  ports:
+  - port: 443
+    protocol: TCP
+    name: https
+  selector:
+    app: rockside
+    tier: frontend  
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rockside-front
+  labels:
+    app: rockside
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rockside
+      tier: frontend
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        app: rockside
+        tier: frontend
+    spec:
+      volumes:
+      - name: rockside-front-certs-volume
+        secret:
+           secretName: rockside-front-certs-keys
+      - name: rockside-engine-persistent-storage
+        persistentVolumeClaim:
+          claimName: rockside-engine-pv-claim
+      containers:
+      - image: rockside/front
+        name: rockside-front
+        ports:
+        - containerPort: 443
+        volumeMounts:
+        - name: rockside-front-certs-volume
+          mountPath: /etc/rockside/certs
+        - name: rockside-engine-persistent-storage
+          mountPath: /var/www/storage/app/public
+          readOnly: true
