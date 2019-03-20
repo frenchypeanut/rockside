@@ -54,7 +54,7 @@ sudo rockside engine reconfigure
 https://<ENGINE_URL>/api/nodes/rpc/<NODE_TOKEN>/<VAULT_TOKEN>
 ```
 
-### Storing private keys
+### Features
 
 #### create an account
 
@@ -173,7 +173,7 @@ vault token create -policy=sign-transaction
 # return the token: VAULT_TOKEN
 ```
 
-Add the address and the token in your truffle.js. You will also need a node up.
+Add your rockside node RPC, VAUlT_TOKEN and sender address in your truffle.js.
 
 ```sh
 var Web3 = require("web3");
