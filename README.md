@@ -22,7 +22,7 @@ See you on March 5th !
   * [Advanced configuration (SMTP, Certificates, Data dir...)](doc/installation/advanced-setup.md)
 * [How to send a transaction to my Node?](doc/send-transaction.md)
 * [Tell me more about consortium in Rockside](doc/more-about-consortium.md)
+* [Tell me more about managing private keys with vault.](doc/more-about-vault.md)
 * [Tell me more about mail notifications](doc/more-about-notifications.md)
-* [Tell me more about vault](doc/more-about-vault.md)
 * [The Rockside guitar tutorial](doc/tutorial/guitar-tutorial.md)
 * [Release notes](doc/release-notes.md)
