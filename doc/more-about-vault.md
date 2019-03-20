@@ -86,10 +86,10 @@ vault read rockside/account/0x62b1d469a3ae3bb5669ea69c933bb1649ff02439
 
 ```sh
 vault policy write account_creator -<<EOF
-path "rockside/keys/new" {
+path "rockside/account/new" {
   capabilities = ["create"]
 }
-path "rockside/keys/import" {
+path "rockside/account/import" {
   capabilities = ["create"]
 }
 EOF
@@ -101,7 +101,7 @@ On all accounts
 
 ```sh
 vault policy write all_signer -<<EOF
-path "rockside/sign-tx/*" {
+path "rockside/transaction/*" {
   capabilities = ["create"]
 }
 EOF
@@ -111,7 +111,7 @@ On a specific account
 
 ```sh
 vault policy write unique_signer -<<EOF
-path "rockside/sign-tx/0x62b1d469a3ae3bb5669ea69c933bb1649ff02439" {
+path "rockside/transaction/0x62b1d469a3ae3bb5669ea69c933bb1649ff02439" {
   capabilities = ["create"]
 }
 EOF
@@ -123,7 +123,7 @@ On all accounts
 
 ```sh
 vault policy write all_reader -<<EOF
-path "rockside/keys/*" {
+path "rockside/account/*" {
   capabilities = ["read"]
 }
 EOF
@@ -133,7 +133,7 @@ On a specific account
 
 ```sh
 vault policy write unique_reader -<<EOF
-path "rockside/keys/0x62b1d469a3ae3bb5669ea69c933bb1649ff02439" {
+path "rockside/account/0x62b1d469a3ae3bb5669ea69c933bb1649ff02439" {
   capabilities = ["read"]
 }
 EOF
