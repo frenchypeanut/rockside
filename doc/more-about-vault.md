@@ -6,15 +6,15 @@ A Vault is a tool powered for the storing, managing and accessing secrets. In ou
 
 ### Why use a vault ?
 
-The best way to protect a private keys is to store them in one place and never share them or expose them directly to the outside world. Vaults provides such features for your private keys, insuring that only people with the right access can you use but can't have it in clear.
+The best way to protect a private key is to store it in one place and never share it or expose it directly to the outside world. Vault provides such features for your private keys. With the Rockside Ethereum Vault plug-in, we guarantee that only people with the right access can sign a transaction without having direct access with the private key.
 
 ### Which vaults are compatible with Rockside ?
 
-Rockside is using [Hashicorp Vault](https://www.vaultproject.io/) solution. We developed an open-source plugin for Hashicorp Vault that enabled transactions signing inside it. That way your users only send unsigned transactions with their vault credentials, and they get back signed transactions.
+You can connect an [Hashicorp Vault] (https://www.vaultproject.io/) to Rockside. We have developed an open-source plug-in for Hashicorp Vault. This plugin provide transaction signing on the Vault. In this way, your users only send unsigned transactions with their vault credentials and they retrieve the signed transactions.
 
-The best way to understand and mastering Vault is by reading [the official Vault documentation](https://www.vaultproject.io/docs/).
+The best way to understand and master Vault is to consult the official Vault documentation (https://www.vaultproject.io/docs/).
 
-### How to configure the vault ?
+### How to configure the vault  policies?
 
 Policies are not handled by the plugin or by Rockside. It is the client's responsibility to configure them and affect them to theirs users.
 
@@ -24,13 +24,16 @@ See [the official Vault documentation](https://www.vaultproject.io/docs/concepts
 
 See [the official Vault documentation](https://learn.hashicorp.com/vault/getting-started/install).
 
-### Rockside Hashicorp Vault plugin installation & start
+### Rockside Hashicorp Vault plugin
 
 The purpose of this plugin is to provide the vault with a connector to the rockside engine and some features to manage Ethereum account.
 
+####  Build and Install Rockside Ethereum Vault Plugin
+
 For more details and install process, see the readme on the [project github](https://github.com/blockchain-studio/rockside-hashicorp-vault-plugin).
 
-After that you need to connect your engine to the vault.
+#### Connect your vault to Rockside
+After installing and configuring your vault and the Rockside Ethereum Vault plugin, you can connect your vault to Rockside.
 
 Edit **~/.rockside/engine/rockside.env** and add:
 
@@ -43,30 +46,38 @@ Relaunch Engine with new configuration:
 sudo rockside engine reconfigure
 ```
 
+#### Send unsigned transaction to Rockside
+
+  You can send an unsigned transaction with Rockside in the same way as with a signed transaction. You simply need to add the vault access token at the end of your node's RPC URL.
+  
+  ```
+https://<ENGINE_URL>/api/nodes/rpc/<NODE_TOKEN>/<VAULT_TOKEN>
+```
+
 ### Storing private keys
 
 #### create an account
 
 ```sh
-vault write -f rockside/keys/new
+vault write -f rockside/account/new
 ```
 
 #### import an account
 
 ```sh
-vault write -f rockside/keys/import private_key="f5a200fea608820dc411bc212ff4ec76d331e6efd39ac1bf30aca066fb3c6807"
+vault write -f rockside/account/import private_key="f5a200fea608820dc411bc212ff4ec76d331e6efd39ac1bf30aca066fb3c6807"
 ```
 
 #### list accounts
 
 ```sh
-vault list rockside/keys
+vault list rockside/account
 ```
 
 #### read an account (and get its private key)
 
 ```sh
-vault read rockside/keys/0x62b1d469a3ae3bb5669ea69c933bb1649ff02439
+vault read rockside/account/0x62b1d469a3ae3bb5669ea69c933bb1649ff02439
 ```
 
 ### Policies creation
@@ -136,20 +147,20 @@ vault token create -policy=<policy name>
 
 This token allows you to connect to the vault and have access to all the route accessible with the associated policy.
 
-### Example with truffle
+### Example: contract deployment with truffle
 
 First generate an account. You will need to transfert some ether to that address.
 
 ```sh
-vault write -f rockside/keys/new
+vault write -f rockside/account/new
 # return the address: 0xabcdef00000000000000000000000000000000000
 ```
 
 Create a policy for this account
 
 ```sh
-vault policy write example -<<EOF
-path "rockside/sign-tx/0xabcdef00000000000000000000000000000000000" {
+vault policy write sign-transaction -<<EOF
+path "rockside/transaction/0xabcdef00000000000000000000000000000000000" {
   capabilities = ["create"]
 }
 EOF
@@ -158,8 +169,8 @@ EOF
 Derivate a token from this policy
 
 ```sh
-vault token create -policy=example
-# return the token: supertoken
+vault token create -policy=sign-transaction
+# return the token: VAULT_TOKEN
 ```
 
 Add the address and the token in your truffle.js. You will also need a node up.
@@ -171,7 +182,7 @@ module.exports = {
     networks: {
         development: {
             provider: function() {
-                return new Web3.providers.HttpProvider('http://localhost:8080/api/nodes/rpc/<node token>/supertoken');
+                return new Web3.providers.HttpProvider('https://<ENGINE_URL>/api/nodes/rpc/<NODE_TOKEN>/<VAULT_TOKEN>');
             },
             network_id: "*",
             from: "0xabcdef00000000000000000000000000000000000",
@@ -188,7 +199,7 @@ truffle migrate
 
 And that's it ! You just sended an unsigned tx with your vault token, the vault has identified you and signed the tx with the good privatekey and then the tx was sent to the network. Keep in mind that the privatekey was never exposed.
 
-### Process of the solution
+### Understand how it work
 
 ![alt text](vault_simplified.png)
 
