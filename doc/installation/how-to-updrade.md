@@ -1,7 +1,7 @@
 # How to upgrade Rockside
 
 ### Upgrade Rockside Engine
-When a new version of rockside is released you can updrade your existing version simply with :
+When a new version of rockside is released you can upgrade your existing version with :
 
 ```
 rockside engine upgrade
