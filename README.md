@@ -45,6 +45,7 @@ rockside engine install
   * [How to install Rockside Slave](doc/installation/install-rockside-slave.md)
   * [How to configure network ports](doc/installation/networking.md)
   * [Advanced configuration (SMTP, Certificates, Data dir...)](doc/installation/advanced-setup.md)
+  * [How to updrade my version of Rockside)](doc/installation/how-to-updrade.md)
   * [How to install Rockside Engine on Kubernetes)](doc/installation/k8s/README.md)
 * [How to send a transaction to my Node?](doc/send-transaction.md)
 * [Tell me more about consortium in Rockside](doc/more-about-consortium.md)
