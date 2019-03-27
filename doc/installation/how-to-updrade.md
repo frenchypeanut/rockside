@@ -7,7 +7,7 @@ When a new version of rockside is released you can upgrade your existing version
 rockside engine upgrade
 ```
 
-This command will clear Rockside containers, download images of the new version and create back containers. Then it will execute database migrations if needed.
+This command will clear Rockside containers, download images of the new version and create containers with the new images. Then it will execute database migrations if needed.
 
 ### Upgrade Rockside Slave
 
