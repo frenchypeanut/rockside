@@ -42,25 +42,26 @@ todo
 - A node is in on one and only one Slave
 
 
-## Permissions of ADMIN vs NON-ADMIN
+## Permissions of ADMIN vs NON-ADMIN for ON PREMISE & CLOUD versions
 
-| Feature                               | ADMIN     | NON ADMIN |
-| -------------                         |:---------:|:---------:|
-| Create groupe                         |✅         |✅        |
-| Add user to groupe                    |✅         |✅        |
-| Read applications users               |✅         |          |
-| Create / Update user                  |✅         |          |
-| Give Admin Role to User               |✅         |          |
-| Enable / Disable Registration         |✅         |          |
-| Register slave                        |✅         |          |
-| Read slave infos                      |✅         |          |
-| Create node                           |✅         |          |
-| Stop/Start Node Sync                  |✅         |          |
-| Use node RPC                          |✅         |✅        |
-| Create consortium                     |✅         |✅        |
-| Create Address Book                   |✅         |✅        |
-| Notification setup                    |✅         |          |
-| Notification activation by node       |✅         |✅        |
+| Feature                               | ADMIN     | NON ADMIN ON PREMISE | NON ADMIN CLOUD |
+| -------------                         |:---------:|:---------:|:---------:|
+| Create groupe                         |✅         |✅        |✅        |
+| Add user to groupe                    |✅         |✅        |✅        |
+| Read applications users               |✅         |          |           |
+| Create / Update user                  |✅         |          |           |
+| Give Admin Role to User               |✅         |          |           |
+| Enable / Disable Registration         |✅         |          |           |
+| Register slave                        |✅         |          |           |
+| Read slave infos                      |✅         |          |           |
+| Create node                           |✅         |          |           |
+| Stop/Start Node Sync                  |✅         |          |           |
+| Use node RPC                          |✅         |✅        |✅        |
+| Create / Join consortium              |✅         |✅        |✅only 1  |
+| Add member to consortium              |✅         |✅        |✅max 3   |
+| Create Address Book                   |✅         |✅        |✅        |
+| Notification setup                    |✅         |          |        |
+| Notification activation by node       |✅         |✅        |        |
 
 
 
