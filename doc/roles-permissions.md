@@ -27,6 +27,13 @@ A groupe is a context. In this context we find people, consortiums, and nodes.
 ### consortium
 A consortium represents a set of validating nodes on the same network.A consortium represents a set of validating nodes on the same network. These nodes can be linked to slaves or not (external)
 
+### Alert Mail
+todo
+
+### Address Book
+todo
+
+
 ## Relationship
 - A user is in one or several groups
 - A node is in one and only one group
@@ -35,15 +42,27 @@ A consortium represents a set of validating nodes on the same network.A consorti
 - A node is in on one and only one Slave
 
 
-## Permissions of ADMIN vs USER
+## Permissions of ADMIN vs NON-ADMIN
 
-| Feature                  | ADMIN     | USER      |
-| -------------            |:---------:|:---------:|
-| Create groupe            |✅         |✅        |
-| Register slave           |✅         |           |
-| Create node              |✅         |           |
-| Stop/Start Node Sync     |✅         |✅        |
-| Use node RPC             |✅         |✅        |
-| Create consortium        |✅         |✅        |
+| Feature                               | ADMIN     | NON ADMIN |
+| -------------                         |:---------:|:---------:|
+| Create groupe                         |✅         |✅        |
+| Add user to groupe                    |✅         |✅        |
+| Read applications users               |✅         |          |
+| Create / Update user                  |✅         |          |
+| Give Admin Role to User               |✅         |          |
+| Enable / Disable Registration         |✅         |          |
+| Register slave                        |✅         |          |
+| Read slave infos                      |✅         |          |
+| Create node                           |✅         |          |
+| Stop/Start Node Sync                  |✅         |          |
+| Use node RPC                          |✅         |✅        |
+| Create consortium                     |✅         |✅        |
+| Create Address Book                   |✅         |✅        |
+| Notification setup                    |✅         |          |
+| Notification activation by node       |✅         |✅        |
+
+
+
 
 
