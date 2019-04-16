@@ -1,5 +1,5 @@
 # Rockside Roles & Permissions
-There are two roles in Rockside, **ADMIN** users, and **NON-ADMIN** users. Depending on the version of Rockside, **CLOUD** or **ENTERPRISE**, permissions on roles can vary. 
+There are two roles in Rockside, **ADMIN** users, and **NON-ADMIN** users. Depending on the version of Rockside, **CLOUD** or **ENTERPRISE**, permissions on roles can vary.
 This document specifies the permissions for each context.
 
 
@@ -19,13 +19,13 @@ All users who register at Rockside after installation
 A node is the gateway to Blockchain Network (ledger copy)
 
 ### slave
-A slave is the representation of an instance of Rockside-Slave. To simplify, this is the server where the node is installed. A Slave is not linked to a group. It is global to the instance and visible / usable by all groups. 
+A slave is the representation of an instance of Rockside-Slave. To simplify, this is the server where the node is installed. A Slave is not linked to a group. It is global to the instance and visible / usable by all groups.
 
-### groupe
-A groupe is a context. In this context we find people, consortiums, and nodes.
+### group
+A group is a context. In this context we find people, consortiums, and nodes.
 
 ### consortium
-A consortium represents a set of validating nodes on the same network.A consortium represents a set of validating nodes on the same network. These nodes can be linked to slaves or not (external)
+A consortium represents a set of validating nodes on the same network. These nodes can be linked to slaves or not (external)
 
 ### Alert Mail
 todo
@@ -46,8 +46,8 @@ todo
 
 | Feature                               | ADMIN     | USER ON PREMISE | USER CLOUD |
 | -------------                         |:---------:|:---------:|:---------:|
-| Create groupe                         |✅         |✅        |✅        |
-| Add user to groupe                    |✅         |✅        |✅        |
+| Create group                          |✅         |✅        |✅        |
+| Add user to group                     |✅         |✅        |✅        |
 | Read applications users               |✅         |          |           |
 | Create / Update user                  |✅         |          |           |
 | Give Admin Role to User               |✅         |          |           |
