@@ -44,7 +44,7 @@ todo
 
 ## Permissions of ADMIN vs NON-ADMIN for ON PREMISE & CLOUD versions
 
-| Feature                               | ADMIN     | NON ADMIN ON PREMISE | NON ADMIN CLOUD |
+| Feature                               | ADMIN     | USER ON PREMISE | USER CLOUD |
 | -------------                         |:---------:|:---------:|:---------:|
 | Create groupe                         |✅         |✅        |✅        |
 | Add user to groupe                    |✅         |✅        |✅        |
@@ -55,13 +55,15 @@ todo
 | Register slave                        |✅         |          |           |
 | Read slave infos                      |✅         |          |           |
 | Create node                           |✅         |          |           |
+| See TX going through Node RPC         |✅         |✅        |✅         |
 | Stop/Start Node Sync                  |✅         |          |           |
 | Use node RPC                          |✅         |✅        |✅        |
 | Create / Join consortium              |✅         |✅        |✅only 1  |
+| Choose Slave for consortium member    |✅         |✅        |          |
 | Add member to consortium              |✅         |✅        |✅max 3   |
 | Create Address Book                   |✅         |✅        |✅        |
-| Notification setup                    |✅         |          |        |
-| Notification activation by node       |✅         |✅        |        |
+| Notification setup                    |✅         |          |           |
+| Notification activation by node       |✅         |✅        |            |
 
 
 
