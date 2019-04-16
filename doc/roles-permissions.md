@@ -55,12 +55,12 @@ todo
 | Register slave                        |✅         |          |           |
 | Read slave infos                      |✅         |          |           |
 | Create node                           |✅         |          |           |
-| See TX going through Node RPC         |✅         |✅        |✅         |
 | Stop/Start Node Sync                  |✅         |          |           |
+| See TX going through Node RPC         |✅         |✅        |✅         |
 | Use node RPC                          |✅         |✅        |✅        |
-| Create / Join consortium              |✅         |✅        |✅only 1  |
+| Create / Join consortium              |✅         |✅        |only 1  |
 | Choose Slave for consortium member    |✅         |✅        |          |
-| Add member to consortium              |✅         |✅        |✅max 3   |
+| Add member to consortium              |✅         |✅        |max 3   |
 | Create Address Book                   |✅         |✅        |✅        |
 | Notification setup                    |✅         |          |           |
 | Notification activation by node       |✅         |✅        |            |
