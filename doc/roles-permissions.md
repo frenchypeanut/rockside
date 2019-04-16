@@ -1,15 +1,16 @@
 # Rockside Roles & Permissions
 There are two roles in Rockside, **ADMIN** users, and **NON-ADMIN** users. Depending on the version of Rockside, **CLOUD** or **ENTERPRISE**, permissions on roles can vary. 
-This document specifies the permissions for each context
+This document specifies the permissions for each context.
+
 
 ## Roles
-### ADMIN user ON PREMISE Version
+### ADMIN (ON PREMISE)
 This is the person who installed Rockside. The system sets an ADMIN profile to the default user that is generated during the rockside installation.
 
-### ADMIN user CLOUD Version
+### ADMIN (CLOUD)
 This is Rockside Team.
 
-### NON-ADMIN (ON PREMISE & CLOUD Version)
+### NON-ADMIN (ON PREMISE & CLOUD)
 All users who register at Rockside after installation
 
 ## Permissions
@@ -18,7 +19,7 @@ All users who register at Rockside after installation
 A node is the gateway to Blockchain Network (ledger copy)
 
 ### slave
-A slave is the representation of an instance of Rockside-Slave. To simplify, this is the server where the node is installed 
+A slave is the representation of an instance of Rockside-Slave. To simplify, this is the server where the node is installed. A Slave is not linked to a group. It is global to the instance and visible / usable by all groups. 
 
 ### groupe
 A groupe is a context. In this context we find people, consortiums, and nodes.
@@ -34,11 +35,15 @@ A consortium represents a set of validating nodes on the same network.A consorti
 - A node is in on one and only one Slave
 
 
-## Permissions of Admin On Premise
+## Permissions of ADMIN vs USER
 
-| Feature           | read      | Write     |
-| -------------     |:---------:|:---------:|
-| groupe            |[x]        |[x]        |
-| slave             |[x]        |[x]        |
-| node              |[x]        |[x]        |
-| consortium        |[x]        |[x]        |
+| Feature                  | ADMIN     | USER      |
+| -------------            |:---------:|:---------:|
+| Create groupe            |✅         |✅        |
+| Register slave           |✅         |           |
+| Create node              |✅         |           |
+| Stop/Start Node Sync     |✅         |✅        |
+| Use node RPC             |✅         |✅        |
+| Create consortium        |✅         |✅        |
+
+
