@@ -3,24 +3,28 @@ There are two roles in Rockside, **ADMIN** users, and **NON-ADMIN** users. Depen
 This document specifies the permissions for each context
 
 ## Roles
-### ADMIN ON PREMISE
-This is the person who installed Rockside. The system sets an ADMIN profile to the default user that is generated during the rockside installation,
+### ADMIN user ON PREMISE Version
+This is the person who installed Rockside. The system sets an ADMIN profile to the default user that is generated during the rockside installation.
 
-### NON-ADMIN
-todo
+### ADMIN user CLOUD Version
+This is Rockside Team.
+
+### NON-ADMIN (ON PREMISE & CLOUD Version)
+All users who register at Rockside after installation
 
 ## Permissions
 
 ### node
-A node is the gateway to Blockchain Network
+A node is the gateway to Blockchain Network (ledger copy)
 
 ### slave
 A slave is the representation of an instance of Rockside-Slave. To simplify, this is the server where the node is installed 
 
 ### groupe
-
+A groupe is a context. In this context we find people, consortiums, and nodes.
 
 ### consortium
+A consortium represents a set of validating nodes on the same network.A consortium represents a set of validating nodes on the same network. These nodes can be linked to slaves or not (external)
 
 ## Relationship
 - A user is in one or several groups
