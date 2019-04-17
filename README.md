@@ -34,9 +34,7 @@ rockside engine install
 - Rockside engine comes with default login for convenience. Default user credentials are 'default_user@rockside.io' and 'password'. ⚠️ **Please change password of the default user while connected** ⚠️
 
 ### By default sign-in is open on Rockside Early Access release
-If you are exposing your instance of Rockside on a public URL, you can deactivate the registration form can not be disabled.
-In the Rockside Enterprise version, a setting allows you to restrict registrations.
-
+If you expose your instance of Rockside on a public URL, on the "users" screen accessible by administrator users, you can deactivate the sign-up form.
 
 ## <a name="knownledges"></a>Knowledge
 
