@@ -47,30 +47,30 @@ todo
 | Feature                               | ADMIN     | USER ON PREMISE | USER CLOUD |
 | -------------                         |:---------:|:---------:|:---------:|
 | **TRANSACTION**                                |           |           |           |
-| Monitor RPC Node transaction         |✅         |✅        |✅         |
-| Use node RPC                          |✅         |✅        |✅        |
+|   Monitor RPC Node transaction         |✅         |✅        |✅         |
+|   Use node RPC                          |✅         |✅        |✅        |
 | **CONSORTIUM BLOCKCHAIN**                                        |
-| Create / Join consortium              |✅         |✅        |only 1  |
-| Choose Slave for consortium member    |✅         |✅        |          |
-| Add member to consortium              |✅         |✅        |max 3   |
+|   Create / Join consortium              |✅         |✅        |only 1  |
+|   Add member to consortium              |✅         |✅        |max 3   |
 | **ADDITIONNAL FEATURES**                   |           |           |           |
-| Update Address Book                   |✅         |✅        |✅        |
-| Notification setup                    |✅         |          |           |
-| Notification activation by node       |✅         |✅        |            |
+|   Update Address Book                   |✅         |✅        |✅        |
+|   Notification setup                    |✅         |          |           |
+|   Notification activation by node       |✅         |✅        |            |
 | **PUBLIC BLOCKCHAIN**                    |           |           |           |
-| Deploy node                           |✅         |          |           |
-| Stop/Start Node Sync                  |✅         |          |           |
+|   Deploy node                           |✅         |          |           |
+|   Stop/Start Node Sync                  |✅         |          |           |
 | **SLAVE**                                 |           |           |           |
-| Register slave                        |✅         |          |           |
-| Read slave infos                      |✅         |          |           |
+|   Register slave                        |✅         |          |           |
+|   Select Slave     |✅         |✅        |          |
+|   Read slave infos                      |✅         |          |           |
 | **GROUP**                                 |           |           |           |
-| Create group                          |✅         |✅        |✅        |
-| Add user to group                     |✅         |✅        |✅        |
+|   Create group                          |✅         |✅        |✅        |
+|   Add user to group                     |✅         |✅        |✅        |
 | **USER**                                 |           |           |           |
-| Sign in                       |✅         |  ✅        | ✅        |
-| Read users list                       |✅         |          |           |
-| Create / Update users                  |✅         |          |           |
-| Change User role                      |✅         |          |           |
-| Enable / Disable Registration         |✅         |          |           |
+|   Sign in                       |✅         |  ✅        | ✅        |
+|   Read users list                       |✅         |          |           |
+|   Create / Update users                  |✅         |          |           |
+|   Change User role                      |✅         |          |           |
+|   Enable / Disable Registration         |✅         |          |           |
 
 
