@@ -46,26 +46,31 @@ todo
 
 | Feature                               | ADMIN     | USER ON PREMISE | USER CLOUD |
 | -------------                         |:---------:|:---------:|:---------:|
-| Create group                          |✅         |✅        |✅        |
-| Add user to group                     |✅         |✅        |✅        |
-| Read applications users               |✅         |          |           |
-| Create / Update user                  |✅         |          |           |
-| Give Admin Role to User               |✅         |          |           |
-| Enable / Disable Registration         |✅         |          |           |
-| Register slave                        |✅         |          |           |
-| Read slave infos                      |✅         |          |           |
-| Create node                           |✅         |          |           |
-| Stop/Start Node Sync                  |✅         |          |           |
-| See TX going through Node RPC         |✅         |✅        |✅         |
+| **TRANSACTION**                                |           |           |           |
+| Monitor RPC Node transaction         |✅         |✅        |✅         |
 | Use node RPC                          |✅         |✅        |✅        |
+| **CONSORTIUM BLOCKCHAIN**                                        |
 | Create / Join consortium              |✅         |✅        |only 1  |
 | Choose Slave for consortium member    |✅         |✅        |          |
 | Add member to consortium              |✅         |✅        |max 3   |
-| Create Address Book                   |✅         |✅        |✅        |
+| **ADDITIONNAL FEATURES**                   |           |           |           |
+| Update Address Book                   |✅         |✅        |✅        |
 | Notification setup                    |✅         |          |           |
 | Notification activation by node       |✅         |✅        |            |
-
-
-
+| **PUBLIC BLOCKCHAIN**                    |           |           |           |
+| Deploy node                           |✅         |          |           |
+| Stop/Start Node Sync                  |✅         |          |           |
+| **SLAVE**                                 |           |           |           |
+| Register slave                        |✅         |          |           |
+| Read slave infos                      |✅         |          |           |
+| **GROUP**                                 |           |           |           |
+| Create group                          |✅         |✅        |✅        |
+| Add user to group                     |✅         |✅        |✅        |
+| **USER**                                 |           |           |           |
+| Sign in                       |✅         |  ✅        | ✅        |
+| Read users list                       |✅         |          |           |
+| Create / Update users                  |✅         |          |           |
+| Change User role                      |✅         |          |           |
+| Enable / Disable Registration         |✅         |          |           |
 
 
