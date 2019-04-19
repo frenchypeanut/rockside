@@ -33,12 +33,10 @@ rockside engine install
 - Open a browser and fill your Rockside Engine Url
 - Rockside engine comes with default login for convenience. Default user credentials are 'default_user@rockside.io' and 'password'. ⚠️ **Please change password of the default user while connected** ⚠️
 
-### Sign-in is open on Rockside Early Access release
-If you are exposing your instance of Rockside on a public URL, the registration form can not be disabled.
-In the Rockside Enterprise version, a setting allows you to restrict registrations.
+### By default sign-in is open on Rockside Early Access release
+If you expose your instance of Rockside on a public URL, on the "users" screen accessible by administrator users, you can deactivate the sign-up form.
 
-
-## <a name="knownledges"></a>Knowledges
+## <a name="knownledges"></a>Knowledge
 
 
 * [Tell me more about Rockside](doc/more-about-rockside.md)
@@ -49,8 +47,10 @@ In the Rockside Enterprise version, a setting allows you to restrict registratio
   * [How to install Rockside Slave](doc/installation/install-rockside-slave.md)
   * [How to configure network ports](doc/installation/networking.md)
   * [Advanced configuration (SMTP, Certificates, Data dir...)](doc/installation/advanced-setup.md)
+  * [How to updrade my version of Rockside](doc/installation/how-to-updrade.md)
 * [How to send a transaction to my Node?](doc/send-transaction.md)
 * [Tell me more about consortium in Rockside](doc/more-about-consortium.md)
+* [Tell me more about managing private keys with vault.](doc/more-about-vault.md)
 * [Tell me more about mail notifications](doc/more-about-notifications.md)
 * [The Rockside guitar tutorial](doc/tutorial/guitar-tutorial.md)
 * [Release notes](doc/release-notes.md)

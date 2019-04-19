@@ -1,7 +1,15 @@
 # Release notes
 
+## 0.5.0 April 19, 2019
 
-## March 5, 2019 - Early Access Release
+### Key Features
+* Performance improvement
+* Create a consortium with Parity Authority Round
+* Create nodes on a custom network by importing its genesis file
+* Administrator can manage rockside users
+* See which slave is running your node
+
+## 0.4.0 March 5, 2019 - Early Access Release
 Announced on the occasion of EthCC 2019, Rockside Early Access Edition is free for all developers for non-commercial use.
 ### Key Features
 * Run your own Ethereum node
@@ -11,5 +19,5 @@ Announced on the occasion of EthCC 2019, Rockside Early Access Edition is free f
 *A detailed presentation of this reslease is available on our Blog: todo put link here*
 
 
-## November 1, 2018 - Launch Customer Program Release
+## 0.3.0 - November 1, 2018 - Launch Customer Program Release
 Used as a private beta for Rockside Launch Customer Program members. This program has been launched to request feedback from first Rockside users, and let them participate to the roadmap of the product.
