@@ -2,8 +2,10 @@
 
 ### Upgrade Rockside CLI
 
-Download the new version .
+- Download the new version.
+```
 curl -sSL http://releases.rockside.io/cli/get.sh | sh
+```
 
 
 ### Upgrade Rockside Engine
@@ -18,7 +20,7 @@ This command will clear Rockside containers, download images of the new version 
 ### Upgrade Rockside Slave
 
 - Stop your slave.
-- Download the new version .
+- Download the new version.
 ```
 curl -sSL http://releases.rockside.io/slave/get.sh | sh
 ```
