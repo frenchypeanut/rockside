@@ -1,5 +1,15 @@
 # Tell me more about consortium in Rockside
 
+### What is a consortium ?
+
+A consortium is a group of entities, e.g. several companies, which have common interests or same kind of activities and need to interact together without necessarily trusting each other. Every action must be traced and can be audited by all involved entities. Administrators of the network, called validators, are in charge to control the integrity of the transactions and to pack them into blocks, which will then be written in the blockchain.
+
+
+Technically, a consortium network is a private blockchain, which is run by some validators who run a consensus algorithm. The "level of power" is usually the same between validators, by running the same number of validator nodes per entity, although this is specific to the strategy of each consortium.
+
+
+A consortium blockchain can be joined by non-validator nodes (clients, auditors...) which are in possession of the genesis file.
+
 ### How much time does it take to launch a consortium using Rockside?
 
 Using Rockside, it could take less than five minutes to have a consortium up and running.
