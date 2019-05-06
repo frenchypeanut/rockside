@@ -14,7 +14,9 @@ Download the following configuration files:
 
 2) [engine-deployment.yaml](engine-deployment.yaml)
 
-3) [front-deployment.yaml](front-deployment.yaml)
+3) [scheduler-deployment.yaml](scheduler-deployment.yaml)
+
+4) [front-deployment.yaml](front-deployment.yaml)
 
 ## Create a Secrets
 
