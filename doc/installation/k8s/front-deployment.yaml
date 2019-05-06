@@ -6,14 +6,19 @@ metadata:
     app: rockside
     tier: frontend
 spec:
-  type: NodePort
+  type: LoadBalancer
   ports:
-  - port: 443
-    protocol: TCP
-    name: https
+    - port: 443
+      targetPort: 4433
+      protocol: TCP
+      name: https
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
+      name: http
   selector:
     app: rockside
-    tier: frontend  
+    tier: frontend
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -36,20 +41,21 @@ spec:
         tier: frontend
     spec:
       volumes:
-      - name: rockside-front-certs-volume
-        secret:
-           secretName: rockside-front-certs-keys
-      - name: rockside-engine-persistent-storage
-        persistentVolumeClaim:
-          claimName: rockside-engine-pv-claim
-      containers:
-      - image: rockside/front
-        name: rockside-front
-        ports:
-        - containerPort: 443
-        volumeMounts:
         - name: rockside-front-certs-volume
-          mountPath: /etc/rockside/certs
+          secret:
+            secretName: rockside-front-certs-keys
         - name: rockside-engine-persistent-storage
-          mountPath: /var/www/storage/app/public
-          readOnly: true
+          persistentVolumeClaim:
+            claimName: rockside-engine-pv-claim
+      containers:
+        - image: rockside/front:0.5.0
+          name: rockside-front
+          ports:
+            - containerPort: 4433
+            - containerPort: 8080
+          volumeMounts:
+            - name: rockside-front-certs-volume
+              mountPath: /etc/rockside/certs
+            - name: rockside-engine-persistent-storage
+              mountPath: /var/www/storage/app/public
+              readOnly: true

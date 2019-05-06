@@ -47,30 +47,30 @@ spec:
         tier: mysql
     spec:
       volumes:
-      - name: rockside-mysql-persistent-storage
-        persistentVolumeClaim:
-          claimName: rockside-mysql-pv-claim      
-      containers:
-      - image: mysql:5.7
-        name: rockside-mysql
-        env:
-        - name: MYSQL_DATABASE
-          value: rockside
-        - name: MYSQL_USER
-          value: rockside
-        - name: MYSQL_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: rockside-db-password
-              key: password   
-        - name: MYSQL_ROOT_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: rockside-db-password
-              key: password
-        ports:
-        - containerPort: 3306
-        volumeMounts:
         - name: rockside-mysql-persistent-storage
-          mountPath: /var/lib/mysql
-      
+          persistentVolumeClaim:
+            claimName: rockside-mysql-pv-claim
+      containers:
+        - image: mysql:5.7
+          name: rockside-mysql
+          env:
+            - name: MYSQL_DATABASE
+              value: rockside
+            - name: MYSQL_USER
+              value: rockside
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: rockside-db-password
+                  key: password
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: rockside-db-password
+                  key: password
+          ports:
+            - containerPort: 3306
+          volumeMounts:
+            - name: rockside-mysql-persistent-storage
+              mountPath: /var/lib/mysql
+              subPath: mysql
