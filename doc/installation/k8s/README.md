@@ -236,3 +236,23 @@ kubectl delete service -l app=rockside
 kubectl delete pvc -l app=rockside
 ```
 
+## Configure SMTP server
+
+Define for the engine container the following environment variables:
+
+```
+MAIL_HOST=
+MAIL_PORT=
+MAIL_ENCRYPTION=
+MAIL_USERNAME=
+MAIL_PASSWORD=
+MAIL_FROM_ADDRESS=notification@rockside.io
+MAIL_FROM_NAME=rockside
+```
+
+
+
+
+
+
+
