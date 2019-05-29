@@ -51,15 +51,6 @@ rockside-slave --engine.key SLAVE_REGISTRATION_TOKEN --engine.url ROCKSIDE_ENGIN
 
 **Tips:** To run Rockside Slave in background, add "&" at the end of the command. When it's running in background, simply type fg to bring it to foreground.
 
-### Create a Node
-
-On Rockside Engine go to the node creation page:
-
-- Click on rockside logo on the top left, to arrive on your group's blockchain nodes.
-- Click on 'create one'.
-
-Follows instructions
-
 ### Configure Rockside slave service on systemd
 
 If you run a a linux distribution on your server, and use systemd, here are the configuration steps:
@@ -85,6 +76,17 @@ Enable the service
 Start the service
 
     systemctl start rockside-slave.service
+    
+### Run Rockside Slave using https
+
+To enable https communication with the slave you have to add those parameters : -http.tls -http.ip=SLAVE_ACCESSIBLE_IP
+
+```
+rockside-slave --engine.key SLAVE_REGISTRATION_TOKEN --engine.url ROCKSIDE_ENGINE_URL:PORT -http.tls -http.ip=SLAVE_ACCESSIBLE_IP
+```
+
+
+
 
 ## Deploy facilities on cloud provider
 
