@@ -1,4 +1,4 @@
-# Rockside Documentation 🎸
+# Rockside On premise Version Documentation 🎸
 ![Rockside preview](https://raw.githubusercontent.com/blockchain-studio/rockside/master/doc/rockside-preview.png)
 ## EthCC Early Access release
 
