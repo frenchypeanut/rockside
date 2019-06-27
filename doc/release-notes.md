@@ -11,7 +11,7 @@
 ## 0.6.0 June 03, 2019
 
 ### Key Features
-* optimisation for rockside cloud version
+* Optimisations for rockside cloud version
 
 ## 0.5.0 April 19, 2019
 
