@@ -11,7 +11,6 @@ spec:
   selector:
     app: rockside
     tier: backend
-  clusterIP: None
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -50,20 +49,30 @@ spec:
         - name: rockside-engine-persistent-storage
           persistentVolumeClaim:
             claimName: rockside-engine-pv-claim
+      imagePullSecrets:
+        - name: private-docker-key
+      securityContext:
+        runAsGroup: 33
       containers:
-        - image: rockside/engine:0.5.0
+        - image: rockside/engine:v0.7.0
           name: rockside-engine
           env:
             - name: DB_HOST
-              value: rockside-mysql
+              valueFrom:
+                secretKeyRef:
+                  name: rockside-db
+                  key: host
             - name: DB_DATABASE
               value: rockside
             - name: DB_USERNAME
-              value: rockside
+              valueFrom:
+                secretKeyRef:
+                  name: rockside-db
+                  key: username
             - name: DB_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: rockside-db-password
+                  name: rockside-db
                   key: password
             - name: APP_KEY
               valueFrom:
@@ -77,6 +86,8 @@ spec:
                   key: token
             - name: SLAVE_AUTHTOKEN_KEY
               value: rockside
+            - name: APP_URL
+              value: https://35.205.109.90:443
           ports:
             - containerPort: 9000
               name: engine
@@ -90,5 +101,5 @@ spec:
                   [
                     "/bin/bash",
                     "-c",
-                    "php artisan migrate:refresh --no-interaction --force && php artisan passport:install --no-interaction",
+                    "php artisan migrate --no-interaction --force && php artisan passport:install --no-interaction",
                   ]

@@ -1,16 +1,14 @@
 # How to install Rockside Engine Kuberbetes
 
-This tutorial shows you how to deploy a Rockside and a MySQL database using Minikube. 
+This tutorial shows you how to deploy a Rockside and a MySQL database using Minikube.
 Both applications use PersistentVolumes and PersistentVolumeClaims to store data.
 
 ## Before you begin
 
-You need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster. 
+You need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster.
 If you do not already have a cluster, you can create one by using Minikube.
 
-Download the following configuration files:
-
-1) [mysql-deployment.yaml](mysql-deployment.yaml)
+1) [db-secret.yaml](db-secretyaml)
 
 2) [engine-deployment.yaml](engine-deployment.yaml)
 
@@ -24,10 +22,27 @@ A Secret is an object that stores a piece of sensitive data like a password or k
 
 ### Mysql
 
-You will need to replace `YOUR_PASSWORD` with the password you want to use.
+In the db-secret file the base64 value of your host, password and username.
 
 ```
-kubectl create secret generic rockside-db-password --from-literal=password=YOUR_PASSWORD
+echo -n 'my-host' | base64
+```
+
+```
+apiVersion: v1
+kind: Secret
+metadata:
+  name: rockside-db
+data:
+  host: BASE_64_OF_HOST
+  username: BASE_64_OF_USERNAME
+  password: BASE_64_OF_PASSWORD
+```
+
+Then create your secret
+
+```
+kubectl apply -f db-secret.yaml
 ```
 
 ### Rockside Engine
@@ -40,7 +55,7 @@ Generate a random token
 cat /dev/urandom | head -c 2048 | shasum | head -c 40; echo
 ```
 
-You will need to replace `YOUR_TOKEN` with the token you want to use. 
+You will need to replace `YOUR_TOKEN` with the token you want to use.
 
 ```
 kubectl create secret generic rockside-slave-token --from-literal=token=YOUR_TOKEN
@@ -54,7 +69,7 @@ Generate a random key
 cat /dev/urandom | head -c 32 | base64
 ```
 
-You will need to replace `YOUR_KEY` with the token you want to use. 
+You will need to replace `YOUR_KEY` with the token you want to use.
 
 ```
 kubectl create secret generic rockside-app-key --from-literal=key=base64:YOUR_KEY
@@ -62,7 +77,7 @@ kubectl create secret generic rockside-app-key --from-literal=key=base64:YOUR_KE
 
 ### Rockside Front SSL Certificate
 
-1) First generate dhparam file 
+1) First generate dhparam file
 
 ```
 openssl dhparam -out dhparam.pem 2048
@@ -248,6 +263,19 @@ MAIL_USERNAME=
 MAIL_PASSWORD=
 MAIL_FROM_ADDRESS=notification@rockside.io
 MAIL_FROM_NAME=rockside
+```
+
+## Access private dockerhub registry
+
+```
+kubectl create secret docker-registry private-docker-key --docker-username="DOCKER_USERNAME" --docker-password="DOCKER_PASSWORD" --docker-email="DOCKER_EMAIL" --docker-server="https://index.docker.io/v1/"
+```
+
+Then in your deployment, on spec of the template, add :
+
+```
+imagePullSecrets:
+        - name: private-docker-key
 ```
 
 

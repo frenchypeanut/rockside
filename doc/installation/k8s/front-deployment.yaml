@@ -47,9 +47,14 @@ spec:
         - name: rockside-engine-persistent-storage
           persistentVolumeClaim:
             claimName: rockside-engine-pv-claim
+      imagePullSecrets:
+        - name: private-docker-key
       containers:
-        - image: rockside/front:0.5.0
+        - image: rockside/front:v0.7.0
           name: rockside-front
+          env:
+            - name: APP_URL
+              value: https://35.205.109.90:443
           ports:
             - containerPort: 4433
             - containerPort: 8080
