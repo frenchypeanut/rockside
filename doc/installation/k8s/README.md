@@ -14,7 +14,9 @@ Download the following configuration files:
 
 2) [engine-deployment.yaml](engine-deployment.yaml)
 
-3) [front-deployment.yaml](front-deployment.yaml)
+3) [scheduler-deployment.yaml](scheduler-deployment.yaml)
+
+4) [front-deployment.yaml](front-deployment.yaml)
 
 ## Create a Secrets
 
@@ -233,4 +235,24 @@ kubectl delete service -l app=rockside
 ```
 kubectl delete pvc -l app=rockside
 ```
+
+## Configure SMTP server
+
+Define for the engine container the following environment variables:
+
+```
+MAIL_HOST=
+MAIL_PORT=
+MAIL_ENCRYPTION=
+MAIL_USERNAME=
+MAIL_PASSWORD=
+MAIL_FROM_ADDRESS=notification@rockside.io
+MAIL_FROM_NAME=rockside
+```
+
+
+
+
+
+
 

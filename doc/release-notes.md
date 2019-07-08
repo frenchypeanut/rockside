@@ -5,7 +5,7 @@
 ### Key Features
 * Blockchain clients logs availlable on node details screen
 * Pantheon support for mainnet and ropsten network
-* Communication with Rockside Vault Plugin for HD Wallet 
+* Communication with Rockside Vault Plugin for HD Wallet
 
 
 ## 0.6.0 June 03, 2019

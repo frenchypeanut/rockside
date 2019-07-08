@@ -1,35 +1,20 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: engine
+  name: rockside-scheduler
   labels:
     app: rockside
     tier: backend
 spec:
-  ports:
-    - port: 9000
   selector:
     app: rockside
     tier: backend
   clusterIP: None
 ---
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  name: rockside-engine-pv-claim
-  labels:
-    app: rockside
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 10Gi
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: rockside-engine
+  name: rockside-scheduler
   labels:
     app: rockside
 spec:
@@ -46,13 +31,9 @@ spec:
         app: rockside
         tier: backend
     spec:
-      volumes:
-        - name: rockside-engine-persistent-storage
-          persistentVolumeClaim:
-            claimName: rockside-engine-pv-claim
       containers:
-        - image: rockside/engine:0.5.0
-          name: rockside-engine
+        - image: rockside/scheduler:0.5.0
+          name: rockside-scheduler
           env:
             - name: DB_HOST
               value: rockside-mysql
@@ -77,18 +58,3 @@ spec:
                   key: token
             - name: SLAVE_AUTHTOKEN_KEY
               value: rockside
-          ports:
-            - containerPort: 9000
-              name: engine
-          volumeMounts:
-            - name: rockside-engine-persistent-storage
-              mountPath: /var/www/storage/app/public
-          lifecycle:
-            postStart:
-              exec:
-                command:
-                  [
-                    "/bin/bash",
-                    "-c",
-                    "php artisan migrate:refresh --no-interaction --force && php artisan passport:install --no-interaction",
-                  ]
