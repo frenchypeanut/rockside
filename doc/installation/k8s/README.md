@@ -212,6 +212,29 @@ NAME                     READY     STATUS       RESTARTS   AGE
 front-7bc8fcbb5-4622p    1/1       Running		0          66s
 ```
 
+## Configure Rockside
+
+To setup the database and setup rockside you will have to execute the followinf commands:
+
+First get the pod of the engine:
+
+```
+kubectl get pods -l tier=backend
+```
+
+The response should be like this:
+
+```
+NAME                               READY   STATUS    RESTARTS   AGE
+rockside-engine-695669df6f-qvxpz   1/1     Running   0          7m44s
+```
+
+Then execute:
+
+```
+kubectl exec -it rockside-engine-695669df6f-qvxpz -- bash -c  "php artisan migrate --no-interaction --force && php artisan passport:install --no-interaction"
+```
+
 ## Configure SMTP server
 
 Define for the engine container the following environment variables:

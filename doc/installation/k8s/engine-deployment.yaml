@@ -97,12 +97,3 @@ spec:
           volumeMounts:
             - name: rockside-engine-persistent-storage
               mountPath: /var/www/storage/app/public
-          lifecycle:
-            postStart:
-              exec:
-                command:
-                  [
-                    "/bin/bash",
-                    "-c",
-                    "php artisan migrate --no-interaction --force && php artisan passport:install --no-interaction",
-                  ]
