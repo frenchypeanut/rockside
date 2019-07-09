@@ -8,6 +8,8 @@ Both applications use PersistentVolumes and PersistentVolumeClaims to store data
 You need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster.
 If you do not already have a cluster, you can create one by using Minikube.
 
+You will need these files:
+
 1) [db-secret.yaml](db-secret.yaml)
 
 2) [rockside-config.yaml](rockside-config.yaml)
@@ -18,7 +20,8 @@ If you do not already have a cluster, you can create one by using Minikube.
 
 5) [front-deployment.yaml](front-deployment.yaml)
 
-## Create a Secrets
+
+## Create Secrets
 
 A Secret is an object that stores a piece of sensitive data like a password or key. The manifest files are already configured to use a Secret, but you have to create your own Secret.
 
@@ -103,24 +106,21 @@ openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out cert.pe
 kubectl create secret generic rockside-front-certs-keys --from-file=./key.pem --from-file=./cert.pem --from-file=./dhparam.pem
 ```
 
+### Private dockerhub registry
 
-### Verify that the Secret
-
-Verify that the Secret exists by running the following command:
-
-```
-kubectl get secrets
-```
-
-The response should be like this:
+If you need to access images from a private registry, you have to create a secrect like this
 
 ```
-NAME                  		TYPE                    DATA      AGE
-rockside-app-key				Opaque                  1         66s
-rockside-db  		        Opaque                  1         66s
-rockside-front-cert-keys	 Opaque                  1         66s
-rockside-slave-token  		Opaque                  1         66s
+kubectl create secret docker-registry private-docker-key --docker-username="DOCKER_USERNAME" --docker-password="DOCKER_PASSWORD" --docker-email="DOCKER_EMAIL" --docker-server="https://index.docker.io/v1/"
 ```
+
+Then in your deployment, on spec of the template, add:
+
+```
+imagePullSecrets:
+  - name: private-docker-key
+```
+
 ## Create ConfigMap
 
 Create a config to contains the configuration to will be shared between the different part deployment of rockside.
@@ -130,10 +130,10 @@ Edit the rockside-config.yaml file and add the url where your app will be availa
 ```
 app_url: https://cloud.rockside.io
 ```
-
+Then create your config map:
 
 ```
-kubectl apply -f db-secret.yaml
+kubectl apply -f rockside-config.yaml
 ```
 
 ## Deploy Rockside Engine
@@ -170,6 +170,26 @@ NAME                     READY     STATUS       RESTARTS   AGE
 engine-7bc8fcbb5-4622p   1/1       Running		0          66s
 ```
 
+## Deploy Rockside Scheduler
+
+1) Deploy Rockside Scheduler from the scheduler-deployment.yaml file:
+
+```
+kubectl create -f scheduler-deployment.yaml
+```
+
+2) Verify that the Pod is running by running the following command:
+
+```
+kubectl get pods
+```
+
+The response should be like this:
+
+```
+NAME                     READY     STATUS       RESTARTS   AGE
+scheduler-7bc8fcbb5-4622p   1/1       Running		0          66s
+```
 
 ## Deploy Rockside Front
 
@@ -192,43 +212,6 @@ NAME                     READY     STATUS       RESTARTS   AGE
 front-7bc8fcbb5-4622p    1/1       Running		0          66s
 ```
 
-3) Run the following command to get the IP Address for the Rockside Service:
-
-```
-minikube service rockside-front --url --https
-```
-
-The response should be like this:
-
-```
-https://192.168.99.100:31784
-```
-
-
-## Cleaning up
-
-
-1) Run the following commands to delete your Secrets:
-
-```
-kubectl delete secret rockside-app-key
-kubectl delete secret rockside-db-password
-kubectl delete secret rockside-slave-token
-```
-
-2) Run the following commands to delete all Deployments and Services:
-
-```
-kubectl delete deployment -l app=rockside
-kubectl delete service -l app=rockside
-```
-
-3) Run the following commands to delete the PersistentVolumeClaims. The dynamically provisioned PersistentVolumes will be automatically deleted.
-
-```
-kubectl delete pvc -l app=rockside
-```
-
 ## Configure SMTP server
 
 Define for the engine container the following environment variables:
@@ -241,19 +224,6 @@ MAIL_USERNAME=
 MAIL_PASSWORD=
 MAIL_FROM_ADDRESS=notification@rockside.io
 MAIL_FROM_NAME=rockside
-```
-
-## Access private dockerhub registry
-
-```
-kubectl create secret docker-registry private-docker-key --docker-username="DOCKER_USERNAME" --docker-password="DOCKER_PASSWORD" --docker-email="DOCKER_EMAIL" --docker-server="https://index.docker.io/v1/"
-```
-
-Then in your deployment, on spec of the template, add :
-
-```
-imagePullSecrets:
-        - name: private-docker-key
 ```
 
 
