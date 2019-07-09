@@ -8,7 +8,7 @@ Both applications use PersistentVolumes and PersistentVolumeClaims to store data
 You need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster.
 If you do not already have a cluster, you can create one by using Minikube.
 
-You will need these files:
+Download the following configuration files:
 
 1) [db-secret.yaml](db-secret.yaml)
 
@@ -123,9 +123,9 @@ imagePullSecrets:
 
 ## Create ConfigMap
 
-Create a config to contains the configuration to will be shared between the different part deployment of rockside.
+Create a ConfigMap to keep the configuration to share between the different rockside deployments.
 
-Edit the rockside-config.yaml file and add the url where your app will be available.
+Edit the rockside-config.yaml file and add the URL where the rockside app will be available.
 
 ```
 app_url: https://cloud.rockside.io
