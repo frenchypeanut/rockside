@@ -1,3 +1,4 @@
+---
 apiVersion: v1
 kind: Service
 metadata:
@@ -52,7 +53,7 @@ spec:
       imagePullSecrets:
         - name: private-docker-key
       securityContext:
-        runAsGroup: 33
+        runAsGroup: 33 #www-data
       containers:
         - image: rockside/engine:v0.7.0
           name: rockside-engine
