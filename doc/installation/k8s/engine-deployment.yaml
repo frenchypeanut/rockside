@@ -87,7 +87,10 @@ spec:
             - name: SLAVE_AUTHTOKEN_KEY
               value: rockside
             - name: APP_URL
-              value: https://35.205.109.90:443
+              valueFrom:
+                configMapKeyRef:
+                  name: rockside-config
+                  key: app_url
           ports:
             - containerPort: 9000
               name: engine

@@ -8,13 +8,15 @@ Both applications use PersistentVolumes and PersistentVolumeClaims to store data
 You need to have a Kubernetes cluster, and the kubectl command-line tool must be configured to communicate with your cluster.
 If you do not already have a cluster, you can create one by using Minikube.
 
-1) [db-secret.yaml](db-secretyaml)
+1) [db-secret.yaml](db-secret.yaml)
 
-2) [engine-deployment.yaml](engine-deployment.yaml)
+2) [rockside-config.yaml](rockside-config.yaml)
 
-3) [scheduler-deployment.yaml](scheduler-deployment.yaml)
+3) [engine-deployment.yaml](engine-deployment.yaml)
 
-4) [front-deployment.yaml](front-deployment.yaml)
+4) [scheduler-deployment.yaml](scheduler-deployment.yaml)
+
+5) [front-deployment.yaml](front-deployment.yaml)
 
 ## Create a Secrets
 
@@ -22,7 +24,7 @@ A Secret is an object that stores a piece of sensitive data like a password or k
 
 ### Mysql
 
-In the db-secret file the base64 value of your host, password and username.
+In the db-secret.yaml file, add the base64 value of your host, password and username.
 
 ```
 echo -n 'my-host' | base64
@@ -115,48 +117,24 @@ The response should be like this:
 ```
 NAME                  		TYPE                    DATA      AGE
 rockside-app-key				Opaque                  1         66s
-rockside-db-password  		Opaque                  1         66s
+rockside-db  		        Opaque                  1         66s
 rockside-front-cert-keys	 Opaque                  1         66s
 rockside-slave-token  		Opaque                  1         66s
 ```
+## Create ConfigMap
 
+Create a config to contains the configuration to will be shared between the different part deployment of rockside.
 
-## Deploy MySQL
-
-The following manifest describes a single-instance MySQL Deployment. The MySQL container mounts the PersistentVolume at /var/lib/mysql. The MYSQL_ROOT_PASSWORD environment variable sets the database password from the Secret.
-
-1) Deploy MySQL from the mysql-deployment.yaml file:
+Edit the rockside-config.yaml file and add the url where your app will be available.
 
 ```
-kubectl create -f mysql-deployment.yaml
+app_url: https://cloud.rockside.io
 ```
 
-2) Verify that a PersistentVolume got dynamically provisioned.
 
 ```
-kubectl get pvc
+kubectl apply -f db-secret.yaml
 ```
-
-The response should be like this:
-
-```
-NAME                      STATUS    VOLUME            CAPACITY   ACCESS MODES   STORAGECLASS   AGE
-rockside-mysql-pv-claim   Bound     pvc-c6d12a02...   10Gi       RWO            standard       66s
-```
-
-3) Verify that the Pod is running by running the following command:
-
-```
-kubectl get pods
-```
-
-The response should be like this:
-
-```
-NAME                     READY     STATUS       RESTARTS   AGE
-mysql-64c54b59f9-xhrln   1/1       Running		0          66s
-```
-
 
 ## Deploy Rockside Engine
 

@@ -54,7 +54,10 @@ spec:
           name: rockside-front
           env:
             - name: APP_URL
-              value: https://35.205.109.90:443
+              valueFrom:
+                configMapKeyRef:
+                  name: rockside-config
+                  key: app_url
           ports:
             - containerPort: 4433
             - containerPort: 8080
